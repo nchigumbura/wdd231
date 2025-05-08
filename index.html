@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A brief description of the webpage.">
+    <meta name="author" content="Nathaniel Chigumbura">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/design.css">
+    <title>Home Page</title>
 </head>
 <body>
+    <header>
+        <img src="images/dp.png" alt="Profile Picture" class="profile-pic">
+        <h1><span>Nathaniel T. Chigumbura</span></h1>
+    </header>
+
+    <nav>
+        <div class="hamburger">
+            <div></div><div></div><div></div>
+        </div>
+        <ul>
+            <li><a href="#home" class="current">Home</a></li>
+            <li><a href="#chamber">Chamber</a></li>
+            <li><a href="#profile">Github Profile</a></li>
+            <li><a href="#linkedin">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid-container">
+        <section id="Coursework">
+            <h2>Course Work</h2>
+            <div id="courses"></div>
+            <button id="showAll">All Courses</button>
+            <button id="showWDD">WDD Courses</button>
+            <button id="showCSE">CSE Courses</button>
+        </section>
     
+        <section id="country">
+            <h2>Harare, Zimbabwe</h2>
+            <img src="images/Harare.webp" alt="Harare">
+        </section>
+    
+        <section id="certificate">
+            <h2>Certificate</h2>
+            <p>This is the services section of the page.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Nathaniel Chigumbura, Harare, Zimbabwe. All rights reserved.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+@media (min-width: 769px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        gap: 20px; /* Space between sections */
+    }
+
+    section {
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    #Coursework {
+        grid-column: span 2; /* Stretch coursework section across both columns */
+    }
+}

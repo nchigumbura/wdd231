@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #6C757D;
+    --secondary-color: #343A40;
+    --background-color: #F8F9FA;
+    --text-color: #212529;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+    --max-width: 1200px;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+    nav ul.active {
+        display: flex;
+    }
+}
