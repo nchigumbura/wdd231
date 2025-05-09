@@ -59,7 +59,7 @@ nav ul li a {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: 4px 0;
 }
 

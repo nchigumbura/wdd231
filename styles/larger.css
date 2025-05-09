@@ -1,8 +1,8 @@
 @media (min-width: 769px) {
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
-        gap: 20px; /* Space between sections */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
     }
 
     section {
@@ -13,6 +13,6 @@
     }
 
     #Coursework {
-        grid-column: span 2; /* Stretch coursework section across both columns */
+        grid-column: span 2; 
     }
 }

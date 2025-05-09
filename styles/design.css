@@ -89,9 +89,7 @@ nav ul {
     gap: 1rem;
 }
 
-nav ul li {
-    position: center;
-}
+
 
 nav ul li a {
     text-decoration: none;
@@ -117,7 +115,7 @@ nav .current {
 
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Show hamburger on smaller screens */
+        display: flex; 
     }
 }
 
