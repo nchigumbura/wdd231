@@ -1,0 +1,75 @@
+:root {
+    --primary-color: #6C757D;
+    --secondary-color: #343A40;
+    --background-color: #F8F9FA;
+    --text-color: #212529;
+    --header-footer-bg: #2C3E50;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --popup-bg: rgba(0, 0, 0, 0.6);
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('images/bg-blur.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    color: var(--text-color);
+}
+
+header, footer {
+    background-color: var(--header-footer-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--popup-bg);
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+    border-radius: var(--border-radius);
+}
+
+section:hover::before {
+    opacity: 0.3;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
