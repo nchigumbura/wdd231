@@ -7,8 +7,8 @@ async function fetchSpotlights() {
         const data = await response.json();
 
         // Filter Gold & Silver members
-        const qualifiedMembers = data.members.filter(member => member.membership === 3 || member.membership === 2);
-
+       const qualifiedMembers = data.filter(member => member.membership === 3 || member.membership === 2);
+       
         for (let i = qualifiedMembers.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [qualifiedMembers[i], qualifiedMembers[j]] = [qualifiedMembers[j], qualifiedMembers[i]];
@@ -23,7 +23,7 @@ async function fetchSpotlights() {
             spotlightsHtml += `
                 <div class="member-card">
                     <h3>${member.name}</h3>
-                    <img src="${member.image}" alt="${member.name} Logo">
+                    <img src="${member.image}" alt="${member.name} Logo" style="border-radius:25px; height:30px;">
                     <p>📍 Address: ${member.address}</p>
                     <p>📞 Phone: ${member.phone}</p>
                     <p>🔗 Website: <a href="${member.website}" target="_blank">${member.website.replace(/(^\w+:|^)\/\//, '')}</a></p>
