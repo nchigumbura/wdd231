@@ -1,0 +1,53 @@
+/* Text-to-Speech Highlighting */
+[data-tts-block-id].tts-active {
+  background: #e3f0ff;
+  border-radius: 6px;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 89, 191, 0.08);
+}
+
+[data-tts-sentence-id].tts-active {
+  background: #0059bf;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Button Styles */
+.button {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #007eff;
+  color: #fff;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.button:hover {
+  background: #3398ff;
+}
+
+.button:active {
+  background: #0059bf;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Optional: Container for content */
+.tts-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9fbfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}

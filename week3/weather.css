@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F7FA;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #2A2D43;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 20px auto;
+}
+
+figure img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
