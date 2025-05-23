@@ -1,31 +1,119 @@
 .business-directory h2 {
     font-size: 28px;
     color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#cards section {
-    display: flex;
-    align-items: center;
+#toggleView {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color var(--transition-speed);
+}
+
+#toggleView:hover {
+    background-color: var(--secondary-color);
+}
+
+#cards.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: white;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+#cards.grid-view section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--card-bg);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: transform var(--transition-speed);
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
-#cards section:hover {
+#cards.grid-view section:hover {
     transform: scale(1.02);
 }
 
-#cards img {
+#cards.grid-view img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
 
-#cards div {
-    text-align: left;
+#cards.grid-view div {
+    text-align: center;
 }
 
+#cards.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#cards.list-view section {
+    display: block;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed);
+    border-left: 5px solid var(--secondary-color);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#cards.list-view section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#cards.list-view img {
+    display: none;
+}
+
+#cards.list-view h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+#cards.list-view p {
+    margin-bottom: 3px;
+    color: var(--text-color);
+}
+
+#cards.list-view p a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#cards.list-view p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    #cards.grid-view {
+        grid-template-columns: 1fr;
+    }
+}

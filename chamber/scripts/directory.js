@@ -1,60 +1,90 @@
-const url = "data/members.json";
+const membersURL = "data/members.json";
 const cardsContainer = document.querySelector("#cards");
 const toggleViewButton = document.querySelector("#toggleView");
+const hamburger = document.querySelector('.hamburger');
+const mainNav = document.querySelector('.main-nav');
 
-let currentView = "grid"; 
+let isGridView = true;
+let allMembers = [];
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
+    try {
+        const response = await fetch(membersURL);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        allMembers = await response.json();
+        displayMembers(allMembers);
+    } catch (error) {
+        console.error('Error fetching members data:', error);
+        cardsContainer.innerHTML = '<p>Failed to load business directory. Please try again later.</p>';
+    }
 }
 
 const displayMembers = (members) => {
     cardsContainer.innerHTML = "";
-    
+
+    cardsContainer.classList.remove('grid-view', 'list-view');
+    cardsContainer.classList.add(isGridView ? 'grid-view' : 'list-view');
+
+    toggleViewButton.textContent = isGridView ? "Switch to List View" : "Switch to Grid View";
+
     members.forEach((member) => {
-        let card = document.createElement("section");
-        let image = document.createElement("img");
-        let details = document.createElement("div");
-        let name = document.createElement("h2");
+        let section = document.createElement("section");
+        let detailsDiv = document.createElement("div");
+
+        let name = document.createElement("h3");
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let website = document.createElement("a");
+        let membership = document.createElement("p");
+        let otherInfo = document.createElement("p");
 
-        image.src = member.image;
-        image.alt = `Logo of ${member.name}`;
         name.textContent = member.name;
-        address.textContent = `📍 ${member.address}`;
-        phone.textContent = `📞 ${member.phone}`;
+        address.textContent = `Address: ${member.address}`;
+        phone.textContent = `Phone: ${member.phone}`;
+        
         website.href = member.website;
-        website.textContent = "Visit Website";
+        website.textContent = member.website.replace(/(^\w+:|^)\/\//, '');
+        website.target = "_blank";
 
-        details.appendChild(name);
-        details.appendChild(address);
-        details.appendChild(phone);
-        details.appendChild(website);
-        card.appendChild(image);
-        card.appendChild(details);
-
-        if (currentView === "list") {
-            card.style.display = "block";
-            card.style.flexDirection = "column";
-        } else {
-            card.style.display = "flex";
-            card.style.alignItems = "center";
-            card.style.justifyContent = "space-between";
+        membership.textContent = `Membership Level: ${member.membership_level === 1 ? 'Member' : member.membership_level === 2 ? 'Silver' : 'Gold'}`;
+        
+        if (member.other_info) {
+            otherInfo.textContent = member.other_info;
         }
 
-        cardsContainer.appendChild(card);
+        if (isGridView) {
+            let image = document.createElement("img");
+            image.src = member.image; // Corrected to use the full URL from JSON
+            image.alt = `Logo of ${member.name}`;
+            image.loading = "lazy";
+            section.appendChild(image);
+        }
+
+        detailsDiv.appendChild(name);
+        detailsDiv.appendChild(address);
+        detailsDiv.appendChild(phone);
+        detailsDiv.appendChild(website);
+        detailsDiv.appendChild(membership);
+        if (member.other_info) {
+            detailsDiv.appendChild(otherInfo);
+        }
+        
+        section.appendChild(detailsDiv);
+
+        cardsContainer.appendChild(section);
     });
 };
 
 toggleViewButton.addEventListener("click", () => {
-    currentView = currentView === "grid" ? "list" : "grid";
-    toggleViewButton.textContent = currentView === "grid" ? "Switch to List View" : "Switch to Grid View";
-    getMembers();
+    isGridView = !isGridView;
+    displayMembers(allMembers);
+});
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mainNav.classList.toggle('active');
 });
 
 getMembers();
-

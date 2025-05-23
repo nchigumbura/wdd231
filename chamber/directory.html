@@ -15,18 +15,19 @@
     <meta property="og:site_name" content="Nathaniel Chigumbura">
 
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css"> <link rel="stylesheet" href="styles/main.css"> <link rel="stylesheet" href="styles/directory.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="images/logo.webp" alt="Chamber Logo" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;">
-        <nav>
-            <ul>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="main-nav"> <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li> <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -56,13 +57,10 @@
             <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" style="width:40px; height:40px; border-radius:50%; object-fit:cover;"></a>
         </div>
         <div class="footer-right">
-            <p>Nathaniel Chigumbura | WDD 231</p>
-            <p>Last Modified: <span id="last-modified"></span></p>
+            <p>&copy;<span id="current-year"></span> Nathaniel Chigumbura | WDD 231</p> <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
 
     <script src="scripts/directory.js" defer></script>
-    <script src="scripts/utils.js" defer></script>
-</body>
+    <script src="scripts/utils.js" defer></script> </body>
 </html>
-
