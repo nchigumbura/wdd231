@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Home Page</title>
-    <meta name="description" content="Find trusted businesses, events, and resources in your area.">
+    <title>Thank You for Your Application!</title>
+    <meta name="description" content="Confirmation of your Chamber of Commerce membership application.">
     <meta name="author" content="Nathaniel Chigumbura">
-    <meta property="og:title" content="Nathaniel Chigumbura - Home page">
-    <meta property="og:description" content="Discover the work, projects, and portfolio of Nathaniel Chigumbura, explore innovation and creativity.">
-    <meta property="og:url" content="https://nchigumbura.github.io/wdd231">
+    <meta property="og:title" content="Chamber of Commerce - Thank You">
+    <meta property="og:description" content="Your membership application has been received.">
+    <meta property="og:url" content="https://nchigumbura.github.io/wdd231/chamber/thankyou.html">
     <meta property="og:image" content="https://nchigumbura.github.io/wdd231/chamber/images/logo.webp">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Nathaniel Chigumbura">
+    <meta property="og:site_name" content="Chamber of Commerce">
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/join.css">
 </head>
 <body>
     <header>
@@ -26,38 +27,31 @@
         </button>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">join</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="events.html">Events</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <img src="images/hero.webp" alt="Chamber Overview">
-        <div class="hero-content">
-            <h1>Empowering Local Businesses & Communities</h1>
-            <a href="join.html" class="cta-button">Become a Member</a>
-        </div>
-    </section>
+    <main class="thankyou-main">
+        <h1>Thank You for Your Application!</h1>
+        <p>Your membership application has been successfully submitted. We will review your application and get back to you shortly.</p>
 
-    <div class="main-grid">
-        <section class="weather">
-            <h2>Current Weather</h2>
-            <div id="weather-info"></div>
+        <section class="submitted-data">
+            <h2>Submitted Information</h2>
+            <div id="data-display">
+                <p><strong>First Name:</strong> <span id="display-fname"></span></p>
+                <p><strong>Last Name:</strong> <span id="display-lname"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="display-phone"></span></p>
+                <p><strong>Business Name:</strong> <span id="display-bizname"></span></p>
+                <p><strong>Application Timestamp:</strong> <span id="display-timestamp"></span></p>
+            </div>
+            <p class="return-home"><a href="index.html">Return to Home Page</a></p>
         </section>
-
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <div id="event-list"></div>
-        </section>
-
-        <section class="spotlight">
-            <h2>Member Spotlights</h2>
-            <div id="spotlight"></div>
-        </section>
-    </div>
+    </main>
 
     <footer>
         <div class="footer-left">
@@ -77,9 +71,7 @@
         </div>
     </footer>
 
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/events.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/utils.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </body>
 </html>
