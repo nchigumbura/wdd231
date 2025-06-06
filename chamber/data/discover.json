@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Chapungu Sculpture Park",
+    "address": "Burnside Road, Msasa, Harare",
+    "description": "An internationally recognized sculpture park showcasing impressive stone sculptures by Zimbabwean artists in a serene garden setting.",
+    "image": "images/ChapunguSculpturePark.webp"
+  },
+  {
+    "name": "National Heroes Acre",
+    "address": "A1, Harare",
+    "description": "A burial ground and monument for Zimbabwean liberation war heroes, featuring a museum and impressive architecture.",
+    "image": "images/NationalHeroesAcre.webp"
+  },
+  {
+    "name": "Mukuvisi Woodland",
+    "address": "Hillside Rd, Harare",
+    "description": "An indigenous woodland offering a unique wildlife experience with giraffes, zebras, wildebeest, and various bird species.",
+    "image": "images/MukuvisiWoodland.webp"
+  },
+  {
+    "name": "National Gallery of Zimbabwe",
+    "address": "20 Julius Nyerere Way, Harare",
+    "description": "Zimbabwe's premier art institution, housing a diverse collection of contemporary and traditional Zimbabwean art, as well as international works.",
+    "image": "images/NationalGalleryofZimbabwe.webp"
+  },
+  {
+    "name": "Sam Levy's Village",
+    "address": "Borrowdale Rd, Borrowdale, Harare",
+    "description": "An upscale shopping and lifestyle complex offering a variety of retail stores, restaurants, cafes, and entertainment options.",
+    "image": "images/SamLevy'sVillage.webp"
+  },
+  {
+    "name": "Africa Unity Square",
+    "address": "Jason Moyo Avenue, Harare",
+    "description": "A historic and central public park in Harare, known for its jacaranda trees and often used for relaxation and public gatherings.",
+    "image": "images/AfricaUnitySquare.webp"
+  },
+  {
+    "name": "Doon Estate",
+    "address": "400 Beatrice Road, Waterfalls, Harare",
+    "description": "A vibrant hub for art and crafts, featuring several galleries, studios, and artisan shops, often hosting markets and events.",
+    "image": "images/DoonEstate.webp"
+  },
+  {
+    "name": "Ewanrigg Botanical Gardens",
+    "address": "81 Enterprise Rd, Arcturus, Harare",
+    "description": "A beautiful botanical garden renowned for its extensive collection of aloes, cycads, and other exotic plants, perfect for nature walks.",
+    "image": "images/EwanriggBotanicalGardens.webp"
+  }
+]
