@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWeave Hub - Site Plan</title>
+    <meta name="description" content="Site plan document for the StoryWeave Hub website project, outlining design and content strategy.">
+    <meta name="author" content="Nathaniel Chigumbura">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --olive-branch: #6D6A58;
+            --burlap: #C9C1B5;
+            --coconut-flour: #EEEDEA;
+            --cinnamon-stick: #A66B4E;
+            --slate: #363636;
+
+            --primary-heading-color: var(--olive-branch);
+            --main-text-color: var(--slate);
+            --background-page: var(--coconut-flour);
+            --accent-elements: var(--cinnamon-stick);
+            --subtle-borders: var(--burlap);
+
+            --body-font: 'Inter', sans-serif;
+            --special-font: 'Caveat', cursive;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--background-page);
+            color: var(--main-text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        header {
+            background-color: var(--primary-heading-color);
+            color: var(--coconut-flour);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: var(--body-font);
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--subtle-borders);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: var(--primary-heading-color);
+            color: var(--primary-heading-color);
+            border-bottom: 2px solid var(--accent-elements);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-family: var(--body-font);
+            color: var(--primary-heading-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: disc inside;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .example {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .color-olive-branch { background-color: var(--olive-branch); }
+        .color-burlap { background-color: var(--burlap); }
+        .color-coconut-flour { background-color: var(--coconut-flour); }
+        .color-cinnamon-stick { background-color: var(--cinnamon-stick); }
+        .color-slate { background-color: var(--slate); }
+
+        .wireframe-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .wireframe-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--subtle-borders);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .wireframe-container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .wireframe-container img {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StoryWeave Hub - Individual Project Site Plan</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>The website will serve as a home for writers, poets, and storytellers for them to explore creative expression. It will have poems, short stories, and writing techniques, offering inspiration guidance, and a space for sharing literary works. The platform will include interactive features such as writing prompts, feedback tools, and a showcase of user submissions.</p>
+            <p><strong>Project Reason and Purpose:</strong> Writing is a powerful tool for self-expression and storytelling allows us to connect with emotions, cultures, and personal experiences. It is therapeutic. I chose this project because I am passionate about creative writing and want to build a space where others can develop their skills, share their work, and discover new ways to refine their storytelling. This website will empower users by offering resources that enhance their craft, creating a social group for writers.</p>
+        </section>
+
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Proposed Site Name:</strong> StoryWeave Hub</p>
+            <p><strong>Reason for Selection:</strong> The name evokes the collaborative and interconnected nature of storytelling, where ideas are woven together to create narratives. 'Hub' signifies a central, comprehensive place for resources, inspiration, and community engagement for creators.</p>
+
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The site provides a central online platform for writers, poets, and storytellers to foster creative expression. It offers curated content including poetry, short stories, and practical writing techniques, along with interactive features like writing prompts, peer feedback tools, and a showcase for user-submitted literary works, aiming to inspire, guide, and connect a vibrant community of creators.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <p>The questions represent common tasks or inquiries from a potential site visitor:</p>
+            <ul>
+                <li>As an aspiring poet, where can I find new writing prompts to spark my creativity and help me overcome writer's block?</li>
+                <li>I've written a short story; how can I submit it to the platform and get constructive feedback on it from other writers in the community?</li>
+                <li>Where can I read examples of short stories or poems submitted by other users to gain inspiration and see different writing styles?</li>
+                <li>I'm struggling with a specific writing techique, like dialogue; can I find articles or guides on the site to help me improve?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>I selected a color schema which gives of modern yet ancient writer's touch vibe, old papers and natural tones and readable fonts</p>
+            <ul>
+                <li>
+                    <span class="color-box color-olive-branch"></span> <strong>Primary Heading/Brading Color: Olive Branch (`#6D6A58`)</strong>
+                    <br>Used for: Main headings (H1, H2), prominent text elements, and branding accents. Provides a sophisticated, earthy tone.
+                </li>
+                <li>
+                    <span class="color-box color-slate"></span> <strong>Main Text Color: Slate (`#363636`)</strong>
+                    <br>Used for: All body text, paragraph content, and general descriptive text. Offers excellent readability against lighter backgrounds (Contrast Ratio: 11.23 on Coconut Flour).
+                </li>
+                <li>
+                    <span class="color-box color-coconut-flour"></span> <strong>Background Color: Coconut Flour (`#EEEDEA`)</strong>
+                    <br>Used for: The main page background and large content sections. Evokes a clean, paper-like feel.
+                </li>
+                <li>
+                    <span class="color-box color-cinnamon-stick"></span> <strong>Accent/Interactive Elements: Cinnamon Stick (`#A66B4E`)</strong>
+                    <br>Used for: Call-to-action buttons (with light text on them), interactive links (e.g., hover effects), highlights, and underlines. Provides a warm, inviting accent. (Contrast Ratio: 6.59 with Coconut Flour text on it).
+                </li>
+                <li>
+                    <span class="color-box color-burlap"></span> <strong>Subtle Borders/Dividers: Burlap (`#C9C1B5`)</strong>
+                    <br>Used for: Borders, subtle separators, and perhaps very light background elements where mimal distincion is needed.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>The fonts I chose are modern, readable with a  cursive style for specific elements, aligning with the smooth fonts and readable handwriting.</p>
+            <ul>
+                <li>
+                    <strong>Main Body & Headngs Font: 'Inter' (Sans-serif)</strong>
+                    <br>Usage: Applied to all paragraph text, lists, general body content, and most headings (H1, H2, H3, H4). 'Inter' is a clean, modern, and highly readable font perfect for core content.
+                </li>
+                <li>
+                    <strong>Special Elements Font: 'Caveat' (Cursive/Handwriting)</strong>
+                    <br>Usage: Applied to writer's quotes, special emphasizd text (e.g., section intros, author names), and potentially as the font for user typing areas to give that handwriting feel. 'Caveat' is chosen for its clear legibility while still having a friendly, handwritten style.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframe</h2>
+            <p>Below are conceptual wireframe sketches for the home page layout in both mobile and desktop views. These diagrams illustrate the general structure and placement of content, reflecting the rounded corners, card-based layout, and sections described in the design vision.</p>
+
+            <div class="wireframe-container">
+                <div>
+                    <h3>Mobile View Wireframe</h3>
+                    <img src="images/Phone.png" alt="Mobile Home Page Wireframe Sketch">
+                </div>
+                <div>
+                    <h3>Desktop View Wireframe</h3>
+                    <img src="images/WIDEPAGE.png" alt="Desktop Home Page Wireframe Sketch">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
