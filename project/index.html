@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWeave Hub - Weave Your Words</title>
+    <meta name="description" content="StoryWeave Hub: A vibrant online platform for writers, poets, and storytellers to discover, create, and share literary works. Explore prompts, resources, and community showcase.">
+    <meta name="author" content="Nathaniel Chigumbura">
+
+    <meta property="og:title" content="StoryWeave Hub - Weave Your Words">
+    <meta property="og:description" content="Discover, create, and share your unique narratives with a vibrant community of writers and poets.">
+    <meta property="og:url" content="https://nchigumbura.github.io/wdd231/project/index.html">
+    <meta property="og:image" content="https://nchigumbura.github.io/wdd231/project/images/written.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="StoryWeave Hub">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StoryWeave Hub - Weave Your Words">
+    <meta name="twitter:description" content="Discover, create, and share your unique narratives with a vibrant community of writers and poets.">
+    <meta name="twitter:image" content="https://nchigumbura.github.io/storyweavehub/images/twitter-image.webp">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">Creative Writing & StoryTelling</h1>
+            <nav class="main-nav">
+                <button class="hamburger-menu" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="library.html">Explore Library</a></li>
+                    <li><a href="create.html">Create & Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="index-main">
+        <section class="welcome-section">
+            <h2 class="welcome-message">Welcome to StoryWeave Hub – Where every word finds its home.</h2>
+            <p class="tagline">Discover, create, and share your unique narratives with a vibrant community of writers.</p>
+        </section>
+
+        <section class="content-previews">
+            <div class="preview-grid">
+                <div class="card preview-card story-card" data-section="stories">
+                    <div class="card-top-row">
+                        <div class="card-icon"><img src="images/icons/story-icon.webp" alt="Story Icon"></div>
+                        <h3 class="card-title">Read Short Stories</h3>
+                        <span class="card-arrow">›</span>
+                    </div>
+                    <p class="card-preview" id="story-preview-text"></p>
+                    <p class="card-author" id="story-preview-author"></p>
+                </div>
+
+                <div class="card preview-card quote-card" data-section="quotes">
+                    <div class="card-top-row">
+                        <div class="card-icon"><img src="images/icons/quote-icon.webp" alt="Quote Icon"></div>
+                        <h3 class="card-title">Quote Section</h3>
+                        <span class="card-arrow">›</span>
+                    </div>
+                    <p class="card-preview" id="quote-preview-text"></p>
+                    <p class="card-author" id="quote-preview-author"></p>
+                </div>
+
+                <div class="card preview-card resource-card" data-section="resources">
+                    <div class="card-top-row">
+                        <div class="card-icon"><img src="images/icons/resources-icon.webp" alt="Resources Icon"></div>
+                        <h3 class="card-title">Writing Resources</h3>
+                        <span class="card-arrow">›</span>
+                    </div>
+                    <p class="card-preview" id="resource-preview-text"></p>
+                    <p class="card-author" id="resource-preview-author"></p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="poetry-section">
+                    <div class="poetry-header">
+                        <h2 class="section-heading">Discover Poetry</h2>
+                        <span class="card-arrow" data-section="poems">›</span>
+                    </div>
+                    <div class="poetry-grid" id="poetry-preview-grid">
+                    </div>
+                </div>
+
+                <div class="top-categories">
+                    <h2 class="section-heading">Top Categories</h2>
+                    <div class="category-grid">
+                        <div class="card category-card">
+                            <h3 class="card-title">Writing Prompts</h3>
+                            <p class="card-preview">Spark your imagination with new ideas.</p>
+                            <a href="create.html" class="cta-button">Explore Prompts</a>
+                        </div>
+                        <div class="card category-card">
+                            <h3 class="card-title">Community Showcase</h3>
+                            <p class="card-preview">See what our vibrant community is creating.</p>
+                            <a href="create.html#community-showcase" class="cta-button">View Showcase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> StoryWeave Hub</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+
+    <div id="universalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody">
+            </div>
+            <button class="modal-cta-button" id="modalCtaButton">Learn More</button>
+        </div>
+    </div>
+
+    <script src="scripts/utilities.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</body>
+</html>
