@@ -1,3 +1,11 @@
+/* Universal box-sizing for consistency - ADDED THIS BLOCK */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 :root {
     --dark-blue-grey: #2C3E50;
     --soft-blue: #5DA7DB;
@@ -193,6 +201,7 @@ h2 {
     color: white;
     padding: 12px 25px;
     text-decoration: none;
+    border: none; /* Ensure button doesn't have default border */
     border-radius: var(--border-radius-button);
     font-weight: 600;
     margin-top: 20px;
@@ -221,46 +230,52 @@ footer p {
     font-size: 0.9em;
 }
 
+/* Universal Modal Styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(var(--glass-blur));
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable scrolling on the main page */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    backdrop-filter: blur(var(--glass-blur)); /* Glassmorphism effect */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
     opacity: 0;
     transition: opacity var(--transition-duration) ease-in-out;
 }
 
 .modal.active {
-    display: flex;
+    display: flex; /* Show the modal */
     opacity: 1;
 }
 
 .modal-content {
-    background: var(--modal-background);
+    background: var(--modal-background); /* White background with transparency */
     border-radius: var(--border-radius-main);
     padding: 30px;
-    margin: 20px;
-    max-width: 700px;
-    width: 90%;
+    margin: 20px; /* Base margin around the modal */
+    max-width: 1000px; /* Increased max-width for better 3-column layout */
+    width: 95%; /* Take more width to use max-width effectively */
     box-shadow: var(--shadow-hover);
     position: relative;
-    transform: translateY(20px);
-    opacity: 0;
+    transform: translateY(20px); /* Initial state for animation */
+    opacity: 0; /* Initial state for animation */
     transition: transform var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
     backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
+
+    /* Essential for scrolling body content */
+    max-height: calc(100vh - 80px); /* Max height calculation (100vh - 2*margin) */
+    display: flex; /* Enable flex for vertical layout */
+    flex-direction: column; /* Stack children vertically */
 }
 
 .modal.active .modal-content {
-    transform: translateY(0);
+    transform: translateY(0); /* Animate to final position */
     opacity: 1;
 }
 
@@ -273,14 +288,23 @@ footer p {
     right: 25px;
     cursor: pointer;
     transition: color var(--transition-duration) ease-in-out;
-    line-height: 0.5;
+    line-height: 0.5; /* Adjust line height for better alignment of 'x' */
 }
 
 .close-button:hover {
     color: var(--accent-elements);
 }
 
-.modal-cta-button {
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.modal-cta-button,
+.modal-back-button {
     background-color: var(--accent-elements);
     color: white;
     padding: 10px 20px;
@@ -288,38 +312,153 @@ footer p {
     border-radius: var(--border-radius-button);
     cursor: pointer;
     font-size: 1.1em;
-    margin-top: 20px;
     transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 120px; /* Ensure consistent button width */
 }
 
-.modal-cta-button:hover {
+.modal-cta-button:hover,
+.modal-back-button:hover {
     background-color: var(--primary-heading-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Specific poetry author image styling for portrait look */
-.poetry-card .author-image {
-    width: 80px;
-    height: 100px; /* Portrait height */
-    border-radius: var(--border-radius-button);
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 3px solid var(--accent-elements);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.modal-back-button {
+    background-color: var(--dark-text-grey);
 }
 
-.modal-poetry-card img.author-image {
-    width: 60px;
-    height: 80px; /* Portrait height for modal cards */
-    border-radius: var(--border-radius-button);
-    object-fit: cover;
-    border: 2px solid var(--accent-elements);
-    margin-bottom: 10px;
+.modal-back-button:hover {
+    background-color: var(--dark-blue-grey);
 }
 
+.modal-body-content {
+    flex-grow: 1; /* Allows this content to fill available space */
+    overflow-y: auto; /* Enables vertical scrolling when content overflows */
+    /* Adjusted padding for consistent spacing on all sides */
+    padding: 30px 10px 30px 30px; /* Top, Right (for scrollbar), Bottom, Left (added 30px) */
+    font-size: 1.05em;
+    color: var(--main-text-color);
+    word-break: break-word; /* Prevents long words from overflowing */
+}
 
+.modal-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Explicitly 3 columns for larger screens */
+    gap: 30px; /* Increased gap for more vertical and horizontal space between cards */
+}
+
+.modal-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px; /* Internal padding */
+    text-align: left; /* Ensure text alignment is left */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    transition: transform var(--transition-duration) ease-in-out;
+    display: flex; /* Enable flex for internal vertical layout */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content to top, author to bottom */
+    height: 100%; /* Ensure cards fill grid cell height */
+    overflow: hidden; /* Hide any overflow within the card */
+}
+
+.modal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-card h4 {
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    margin: 0 0 15px 0; /* Increased margin-bottom */
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.modal-card p {
+    font-size: 0.95em; /* Slightly increased font size */
+    margin: 0 0 12px 0; /* Increased margin-bottom */
+    line-height: 1.5; /* Slightly increased line-height */
+    width: 100%;
+    flex-grow: 1; /* Allows paragraphs to take up available space */
+    word-break: break-word; /* Crucial for long text in cards */
+}
+
+.modal-card .author-name {
+    font-family: var(--special-font);
+    color: var(--accent-elements);
+    font-size: 1.05em; /* Slightly increased font size */
+    margin-top: 15px; /* Explicit margin-top for separation */
+    width: 100%;
+}
+
+.modal-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em; /* Slightly increased font size */
+    line-height: 1.6; /* Slightly increased line-height */
+    width: 100%;
+    flex-grow: 1; /* Allows lists to take up available space */
+}
+
+.modal-card ul li {
+    margin-bottom: 8px; /* Increased margin-bottom */
+    position: relative;
+    padding-left: 15px;
+    word-break: break-word; /* Crucial for long text in list items */
+}
+
+.modal-card ul li::before {
+    content: '•';
+    color: var(--accent-elements);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive adjustments for modal cards (specific breakpoints for grid) */
+@media (max-width: 980px) { /* Two columns for medium screens */
+    .modal-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) { /* Single column for small screens */
+    .modal-card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px; /* Reduce overall margin on small screens */
+        max-height: calc(100vh - 40px); /* Adjust max-height for smaller margins */
+    }
+
+    .close-button {
+        font-size: 2.5em;
+        top: 10px;
+        right: 15px;
+    }
+
+    .modal-card {
+        padding: 20px; /* Adjust card padding for smaller screens */
+    }
+
+    .modal-card h4 {
+        font-size: 1.1em;
+    }
+
+    .modal-card p,
+    .modal-card ul li {
+        font-size: 0.8em;
+    }
+}
+
+/* General responsive adjustments for the main page */
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -377,17 +516,5 @@ footer p {
     .card-icon img {
         width: 30px;
         height: 30px;
-    }
-
-    .modal-content {
-        padding: 20px;
-        border-radius: 15px;
-        margin: 10px;
-    }
-
-    .close-button {
-        font-size: 2.5em;
-        top: 10px;
-        right: 15px;
     }
 }
