@@ -1,4 +1,3 @@
-/* Universal box-sizing for consistency - ADDED THIS BLOCK */
 html {
   box-sizing: border-box;
 }
@@ -7,514 +6,527 @@ html {
 }
 
 :root {
-    --dark-blue-grey: #2C3E50;
-    --soft-blue: #5DA7DB;
-    --light-grey-background: #F0F2F5;
-    --dark-text-grey: #34495E;
-    --glass-white: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.6);
-    --subtle-divider: rgba(52, 73, 94, 0.1);
+  --dark-blue-grey: #2C3E50;
+  --soft-blue: #5DA7DB;
+  --light-grey-background: #F0F2F5;
+  --dark-text-grey: #34495E;
+  --glass-white: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --subtle-divider: rgba(52, 73, 94, 0.1);
 
-    --primary-heading-color: var(--dark-blue-grey);
-    --main-text-color: var(--dark-text-grey);
-    --background-page: var(--light-grey-background);
-    --accent-elements: var(--soft-blue);
-    --subtle-borders: var(--subtle-divider);
-    --card-background: var(--glass-white);
-    --modal-background: rgba(255, 255, 255, 0.9);
+  --primary-heading-color: var(--dark-blue-grey);
+  --main-text-color: var(--dark-text-grey);
+  --background-page: var(--light-grey-background);
+  --accent-elements: var(--soft-blue);
+  --subtle-borders: var(--subtle-divider);
+  --card-background: var(--glass-white);
+  --modal-background: rgba(255, 255, 255, 0.9);
 
-    --body-font: 'Inter', sans-serif;
-    --special-font: 'Caveat', cursive;
+  --body-font: 'Inter', sans-serif;
+  --special-font: 'Caveat', cursive;
 
-    --shadow-soft: 0px 10px 20px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0px 15px 30px rgba(0, 0, 0, 0.12);
-    --border-radius-main: 24px;
-    --border-radius-button: 50px;
-    --transition-duration: 0.3s;
-    --glass-blur: 15px;
+  --shadow-soft: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0px 15px 30px rgba(0, 0, 0, 0.12);
+  --border-radius-main: 24px;
+  --border-radius-button: 50px;
+  --transition-duration: 0.3s;
+  --glass-blur: 15px;
 }
 
 body {
-    font-family: var(--body-font);
-    background-color: var(--background-page);
-    color: var(--main-text-color);
-    margin: 0;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: var(--body-font);
+  background-color: var(--background-page);
+  color: var(--main-text-color);
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: var(--primary-heading-color);
-    color: var(--light-grey-background);
-    padding: 20px 40px;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-    border-radius: 0 0 var(--border-radius-main) var(--border-radius-main);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: all var(--transition-duration) ease-in-out;
+  background-color: var(--primary-heading-color);
+  color: var(--light-grey-background);
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border-radius: 0 0 var(--border-radius-main) var(--border-radius-main);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--transition-duration) ease-in-out;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .site-title {
-    font-family: var(--body-font);
-    margin: 0;
-    font-size: 2em;
-    letter-spacing: 1px;
-    color: var(--light-grey-background);
+  font-family: var(--body-font);
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: var(--light-grey-background);
 }
 
 .main-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
 }
 
 .nav-links a {
-    color: var(--light-grey-background);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: var(--border-radius-button);
-    transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+  color: var(--light-grey-background);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: var(--border-radius-button);
+  transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    background-color: var(--accent-elements);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent-elements);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hamburger-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: var(--light-grey-background);
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1001;
-    transition: transform var(--transition-duration) ease-in-out;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2em;
+  color: var(--light-grey-background);
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+  transition: transform var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+}
+
+.hamburger-menu:hover {
+  color: var(--soft-blue);
+  transform: scale(1.1);
 }
 
 main {
-    flex-grow: 1;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 h2 {
-    font-family: var(--body-font);
-    color: var(--primary-heading-color);
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
+  font-family: var(--body-font);
+  color: var(--primary-heading-color);
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .card {
-    background: var(--card-background);
-    border-radius: var(--border-radius-main);
-    box-shadow: var(--shadow-soft);
-    padding: 25px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
+  background: var(--card-background);
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--shadow-soft);
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  cursor: pointer;
 }
 
 .card-title {
-    font-family: var(--body-font);
-    color: var(--primary-heading-color);
-    font-size: 1.5em;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  font-family: var(--body-font);
+  color: var(--primary-heading-color);
+  font-size: 1.5em;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .card-preview {
-    color: var(--main-text-color);
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin-bottom: 10px;
+  color: var(--main-text-color);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .card-author {
-    font-family: var(--special-font);
-    color: var(--soft-blue);
-    font-size: 1.1em;
-    margin-top: auto;
-}
-
-.card-icon {
-    width: 60px;
-    height: 60px;
-    background-color: var(--accent-elements);
-    border-radius: var(--border-radius-button);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: var(--special-font);
+  color: var(--soft-blue);
+  font-size: 1.1em;
+  margin-top: auto;
 }
 
 .card-icon img {
-    width: 35px;
-    height: 35px;
-    filter: invert(100%);
+  width: 35px;
+  height: 35px;
+  border-radius: var(--border-radius-main);
+  transition: filter var(--transition-duration) ease-in-out;
 }
 
 .cta-button {
-    display: inline-block;
-    background-color: var(--accent-elements);
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border: none; /* Ensure button doesn't have default border */
-    border-radius: var(--border-radius-button);
-    font-weight: 600;
-    margin-top: 20px;
-    transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  background-color: var(--accent-elements);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    background-color: var(--primary-heading-color);
-    transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--primary-heading-color);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
 }
 
 footer {
-    background-color: var(--primary-heading-color);
-    color: var(--light-grey-background);
-    text-align: center;
-    padding: 20px;
-    border-radius: var(--border-radius-main) var(--border-radius-main) 0 0;
-    margin-top: 30px;
-    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-heading-color);
+  color: var(--light-grey-background);
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--border-radius-main) var(--border-radius-main) 0 0;
+  margin-top: 30px;
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    margin: 5px 0;
-    font-size: 0.9em;
+  margin: 5px 0;
+  font-size: 0.9em;
 }
 
-/* Universal Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 2000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Disable scrolling on the main page */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    backdrop-filter: blur(var(--glass-blur)); /* Glassmorphism effect */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    opacity: 0;
-    transition: opacity var(--transition-duration) ease-in-out;
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(var(--glass-blur));
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-duration) ease-in-out;
 }
 
 .modal.active {
-    display: flex; /* Show the modal */
-    opacity: 1;
+  display: flex;
+  opacity: 1;
 }
 
 .modal-content {
-    background: var(--modal-background); /* White background with transparency */
-    border-radius: var(--border-radius-main);
-    padding: 30px;
-    margin: 20px; /* Base margin around the modal */
-    max-width: 1000px; /* Increased max-width for better 3-column layout */
-    width: 95%; /* Take more width to use max-width effectively */
-    box-shadow: var(--shadow-hover);
-    position: relative;
-    transform: translateY(20px); /* Initial state for animation */
-    opacity: 0; /* Initial state for animation */
-    transition: transform var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
-    backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-
-    /* Essential for scrolling body content */
-    max-height: calc(100vh - 80px); /* Max height calculation (100vh - 2*margin) */
-    display: flex; /* Enable flex for vertical layout */
-    flex-direction: column; /* Stack children vertically */
+  background: var(--modal-background);
+  border-radius: var(--border-radius-main);
+  padding: 30px;
+  margin: 20px;
+  max-width: 1000px;
+  width: 95%;
+  box-shadow: var(--shadow-hover);
+  position: relative;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform var(--transition-duration) ease-in-out, opacity var(--transition-duration) ease-in-out;
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  max-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
 }
 
 .modal.active .modal-content {
-    transform: translateY(0); /* Animate to final position */
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .close-button {
-    color: var(--dark-text-grey);
-    font-size: 3em;
-    font-weight: 300;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    cursor: pointer;
-    transition: color var(--transition-duration) ease-in-out;
-    line-height: 0.5; /* Adjust line height for better alignment of 'x' */
+  color: var(--dark-text-grey);
+  font-size: 3em;
+  font-weight: 500;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+  transition: color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out;
+  line-height: 0.5;
 }
 
 .close-button:hover {
-    color: var(--accent-elements);
+  color: var(--accent-elements);
+  transform: rotate(90deg);
 }
 
 .modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    flex-shrink: 0; /* Prevent buttons from shrinking */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-shrink: 0;
 }
 
 .modal-cta-button,
 .modal-back-button {
-    background-color: var(--accent-elements);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: var(--border-radius-button);
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    min-width: 120px; /* Ensure consistent button width */
+  background-color: var(--accent-elements);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
 }
 
 .modal-cta-button:hover,
 .modal-back-button:hover {
-    background-color: var(--primary-heading-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: var(--primary-heading-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .modal-back-button {
-    background-color: var(--dark-text-grey);
+  background-color: var(--dark-text-grey);
 }
 
 .modal-back-button:hover {
-    background-color: var(--dark-blue-grey);
+  background-color: var(--dark-blue-grey);
 }
 
 .modal-body-content {
-    flex-grow: 1; /* Allows this content to fill available space */
-    overflow-y: auto; /* Enables vertical scrolling when content overflows */
-    /* Adjusted padding for consistent spacing on all sides */
-    padding: 30px 10px 30px 30px; /* Top, Right (for scrollbar), Bottom, Left (added 30px) */
-    font-size: 1.05em;
-    color: var(--main-text-color);
-    word-break: break-word; /* Prevents long words from overflowing */
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 30px 10px 30px 30px;
+  font-size: 1.05em;
+  color: var(--main-text-color);
+  word-break: break-word;
 }
 
 .modal-card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Explicitly 3 columns for larger screens */
-    gap: 30px; /* Increased gap for more vertical and horizontal space between cards */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .modal-card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    padding: 25px; /* Internal padding */
-    text-align: left; /* Ensure text alignment is left */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(calc(var(--glass-blur) / 2));
-    border: 1px solid var(--glass-border);
-    transition: transform var(--transition-duration) ease-in-out;
-    display: flex; /* Enable flex for internal vertical layout */
-    flex-direction: column;
-    justify-content: space-between; /* Pushes content to top, author to bottom */
-    height: 100%; /* Ensure cards fill grid cell height */
-    overflow: hidden; /* Hide any overflow within the card */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(calc(var(--glass-blur) / 2));
+  border: 1px solid var(--glass-border);
+  transition: transform var(--transition-duration) ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
 }
 
 .modal-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .modal-card h4 {
-    font-family: var(--body-font);
-    color: var(--primary-heading-color);
-    margin: 0 0 15px 0; /* Increased margin-bottom */
-    font-size: 1.2em;
-    width: 100%;
+  font-family: var(--body-font);
+  color: var(--primary-heading-color);
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  width: 100%;
 }
 
 .modal-card p {
-    font-size: 0.95em; /* Slightly increased font size */
-    margin: 0 0 12px 0; /* Increased margin-bottom */
-    line-height: 1.5; /* Slightly increased line-height */
-    width: 100%;
-    flex-grow: 1; /* Allows paragraphs to take up available space */
-    word-break: break-word; /* Crucial for long text in cards */
+  font-size: 0.95em;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+  width: 100%;
+  flex-grow: 1;
+  word-break: break-word;
 }
 
 .modal-card .author-name {
-    font-family: var(--special-font);
-    color: var(--accent-elements);
-    font-size: 1.05em; /* Slightly increased font size */
-    margin-top: 15px; /* Explicit margin-top for separation */
-    width: 100%;
+  font-family: var(--special-font);
+  color: var(--accent-elements);
+  font-size: 1.05em;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .modal-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.9em; /* Slightly increased font size */
-    line-height: 1.6; /* Slightly increased line-height */
-    width: 100%;
-    flex-grow: 1; /* Allows lists to take up available space */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .modal-card ul li {
-    margin-bottom: 8px; /* Increased margin-bottom */
-    position: relative;
-    padding-left: 15px;
-    word-break: break-word; /* Crucial for long text in list items */
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+  word-break: break-word;
 }
 
 .modal-card ul li::before {
-    content: '•';
-    color: var(--accent-elements);
-    position: absolute;
-    left: 0;
-    top: 0;
+  content: '•';
+  color: var(--accent-elements);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-/* Responsive adjustments for modal cards (specific breakpoints for grid) */
-@media (max-width: 980px) { /* Two columns for medium screens */
-    .modal-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.modal-item-card .author-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 15px; /* Rounded corners for modal images */
+  border: 3px solid var(--soft-blue);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
 }
 
-@media (max-width: 650px) { /* Single column for small screens */
-    .modal-card-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .modal-content {
-        padding: 20px;
-        border-radius: 15px;
-        margin: 10px; /* Reduce overall margin on small screens */
-        max-height: calc(100vh - 40px); /* Adjust max-height for smaller margins */
-    }
-
-    .close-button {
-        font-size: 2.5em;
-        top: 10px;
-        right: 15px;
-    }
-
-    .modal-card {
-        padding: 20px; /* Adjust card padding for smaller screens */
-    }
-
-    .modal-card h4 {
-        font-size: 1.1em;
-    }
-
-    .modal-card p,
-    .modal-card ul li {
-        font-size: 0.8em;
-    }
+.card-arrow {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--accent-elements);
+  cursor: pointer;
+  transition: transform var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+  display: inline-block;
 }
 
-/* General responsive adjustments for the main page */
+.card-arrow:hover {
+  color: var(--primary-heading-color);
+}
+
+@media (max-width: 980px) {
+  .modal-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .modal-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .modal-content {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    max-height: calc(100vh - 40px);
+  }
+
+  .close-button {
+    font-size: 2.5em;
+    top: 10px;
+    right: 15px;
+  }
+
+  .modal-card {
+    padding: 20px;
+  }
+
+  .modal-card h4 {
+    font-size: 1.1em;
+  }
+
+  .modal-card p,
+  .modal-card ul li {
+    font-size: 0.8em;
+  }
+}
+
 @media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        border-radius: 0 0 15px 15px;
-    }
+  header {
+    padding: 15px 20px;
+    border-radius: 0 0 15px 15px;
+  }
 
-    .site-title {
-        font-size: 1.6em;
-    }
+  .site-title {
+    font-size: 1.6em;
+  }
 
-    .main-nav .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: var(--primary-heading-color);
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 15px 0;
-    }
+  .main-nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary-heading-color);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+  }
 
-    .main-nav .nav-links.active {
-        display: flex;
-    }
+  .main-nav .nav-links.active {
+    display: flex;
+  }
 
-    .nav-links li {
-        text-align: center;
-        margin: 10px 0;
-    }
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
 
-    .hamburger-menu {
-        display: block;
-    }
+  .hamburger-menu {
+    display: block;
+  }
 
-    main {
-        padding: 20px;
-        margin: 20px auto;
-    }
+  main {
+    padding: 20px;
+    margin: 20px auto;
+  }
 
-    .card {
-        padding: 20px;
-        border-radius: 15px;
-    }
+  .card {
+    padding: 20px;
+    border-radius: 15px;
+  }
 
-    .card-title {
-        font-size: 1.3em;
-    }
+  .card-title {
+    font-size: 1.3em;
+  }
 
-    .card-icon {
-        width: 50px;
-        height: 50px;
-    }
-    .card-icon img {
-        width: 30px;
-        height: 30px;
-    }
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .card-icon img {
+    width: 30px;
+    height: 30px;
+  }
 }

@@ -57,6 +57,7 @@ sup {
 }
 img {
     border-style: none;
+    border-radius: 15px;
 }
 button,
 input,

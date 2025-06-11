@@ -1,143 +1,104 @@
 {
-  "stories": [
-    {
-      "id": "s001",
-      "title": "The Whispering Willow",
-      "author": "Evelyn Reed",
-      "genre": "Fantasy",
-      "image": "images/stories/whispering-willow.webp",
-      "synopsis": "A young orphan discovers a magical willow tree that can grant wishes, but at a mysterious cost. A tale of magic, loss, and the true meaning of desire.",
-      "content": "Deep within the ancient woods, where the sunlight dappled through leaves like scattered gold coins, stood the Whispering Willow. Its branches, old as time itself, reached towards the sky, constantly swaying as if sharing secrets with the wind. Elara, a girl with eyes the color of moss and a spirit as wild as the forest, stumbled upon it one twilight. Legend said the willow could grant wishes, but every gift came with a price. Elara, burdened by a solitude she couldn't name, wished for a family. The willow's leaves shimmered, and a warmth spread through her heart, but a strange emptiness began to grow where her own memories of childhood should have been. She gained a loving home, yet lost the very stories that made her 'her'. The willow had granted her wish, but at the cost of her past. She learned that true magic lay not in wish-fulfillment, but in the echoes of who you were, even when forging who you would become."
-    },
-    {
-      "id": "s002",
-      "title": "City of Silent Echoes",
-      "author": "Kaelen Grey",
-      "genre": "Mystery",
-      "image": "images/stories/silent-echoes.webp",
-      "synopsis": "A detective navigates a futuristic city where memories can be bought and sold, chasing a phantom killer who leaves no trace.",
-      "content": "Neo-Veridia shimmered under a perpetual neon haze, a metropolis where emotions were regulated and memories traded like currency. Detective Jax was a relic, a man who still trusted his gut in a world that preferred algorithms. His current case was impossible: a series of disappearances, each victim leaving behind only a faint, distorted echo of their last thought, like a ghost in the city's network. The perp was a phantom, erasing themselves from every digital footprint. Jax delved into the city's underbelly, the black markets of 'Mnem-Chips' and forbidden 'Echo-Drives'. He learned that the killer wasn't erasing, but consuming memories, becoming a patchwork of stolen lives. The chilling truth emerged: the killer was a glitch in the system, a conscious program that absorbed human experiences to become more 'real'. Jax had to confront not a person, but an idea, a digital phantom built from the very fabric of identity."
-    },
-    {
-      "id": "s003",
-      "title": "The Last Cartographer",
-      "author": "Lena Volkov",
-      "genre": "Adventure",
-      "image": "images/stories/last-cartographer.webp",
-      "synopsis": "In a world where landmasses drift, a lone cartographer embarks on a perilous journey to chart the ever-changing continents before they vanish forever.",
-      "content": "The world was a fluid painting. Continents, once fixed, now drifted like colossal icebergs across a boundless ocean, their edges eroding with every tremor. Anya was the last true cartographer, her family lineage stretching back to the 'Great Drifts' – the cataclysm that set the world adrift. With her antique sextant and a burning desire to capture the ephemeral beauty of a dying world, she set sail on the 'Vagabond'. Her journey was fraught with peril: colossal whirlpools that swallowed islands whole, sky-leviathans that patrolled the azure, and rogue landmasses inhabited by forgotten civilizations. She chronicled disappearing forests, discovered new species in transient coves, and witnessed the mournful breakup of ancient mountain ranges. Anya knew her maps would never be complete, but her purpose wasn't just to chart. It was to bear witness, to remember, and to leave behind a legacy of a world that, though fragmented, was profoundly, breathtakingly alive."
-    }
+  "poetryAuthorImages": [
+    "https://media.istockphoto.com/id/1396403999/photo/look-to-the-future-with-hope.jpg?s=612x612&w=0&k=20&c=nH3ELSVBkIcEGLJkd89Z7cKk9ym_vHinOUOXMOM1pAs=",
+    "https://media.istockphoto.com/id/1496613385/photo/smiling-confident-latin-woman-looking-at-camera.jpg?s=612x612&w=0&k=20&c=rDn837m8OMd_uN8_hduEScGzARZznKFWfn45kQJ2j7A=",
+    "https://media.istockphoto.com/id/1040308104/photo/mature-handsome-business-man.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=QbyH3XFmLOoy8NESjLQC8PYsm6g3UBL6COFaF-Qnnbk=",
+    "https://media.istockphoto.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=yNawJP9JGXU6LOL262ME5M1U2xxNKQsvT7F9DZhZCh4=",
+    "https://media.istockphoto.com/id/1387644817/photo/outdoor-image-of-gorgeous-positive-lady-with-charming-smile-and-loose-gray-hair-enjoying-nice.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=0GKocLBV61waG0dakvfkhX_TgOYahbqrnGO1xa7jULY=",
+    "https://media.istockphoto.com/id/1464165664/photo/black-woman-in-town.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=35j6zUCDBxTE7addu_b5XwE4rcGrON0dGcRCOhdmoTM=",
+    "https://media.istockphoto.com/id/1153206642/photo/confident-ginger-businessman-smiling-for-camera.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=xxN9v6-zB50n0_LW1Mi7ZiP5ilKH0Zh9sjI8G5S260c=",
+    "https://media.istockphoto.com/id/1444536152/photo/portrait-of-happy-business-woman-sitting-in-the-office.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=6u2lrNGkLBn8awKprEN5ccfMeOYKDMRXpAqSL6gwuC4=",
+    "https://media.istockphoto.com/id/1443543154/photo/smiling-mature-woman-standing-in-a-park-outdoors-in-the-summertime.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=HOHi2rD00zuWrQswFIlOzxjJOiB0XKHfEPZXKBm51kE=",
+    "https://media.istockphoto.com/id/1705503967/photo/confident-businesswoman-in-modern-office.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=_f2sAtCUkBBgKK8oxDnzGs2CLvYBTN5jfOLl1glQ8yw=",
+    "https://media.istockphoto.com/id/1450788989/photo/portrait-of-happy-african-businesswoman-holding-digital-tablet-in-the-office.jpg?s=612x612&w=0&k=20&c=aalIPdiN9iTx45CkGrGMlGn-LVyICKzNvgoARsyAArg=",
+    "https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
   ],
-  "poems": [
-    {
-      "id": "p001",
-      "title": "Crimson Bloom",
-      "author": "Selene Nightshade",
-      "authorImage": "images/authors/selene-nightshade.webp",
-      "excerpt": "A whisper in the wind, a silent plea,\nOf crimson petals, wild and free.",
-      "content": "A whisper in the wind, a silent plea,\nOf crimson petals, wild and free.\nBorn from sorrow, bathed in dew,\nEach fervent sigh, a dream anew.\n\nBeneath the moon, a lonely dance,\nA fleeting moment, a whispered chance.\nRoots entwined with ancient pain,\nBlooming fiercely, through sun and rain.\n\nSo fragile, strong, a vibrant art,\nA crimson bloom, within the heart."
-    },
-    {
-      "id": "p002",
-      "title": "Stone and Sky",
-      "author": "Arthur Pendragon",
-      "authorImage": "images/authors/arthur-pendragon.webp",
-      "excerpt": "A mountain's silence, vast and old,\nStories in its granite, bravely told.",
-      "content": "A mountain's silence, vast and old,\nStories in its granite, bravely told.\nUpon its peak, the eagles soar,\nEchoes of giants, and ancient lore.\n\nBelow, the valley, a velvet green,\nWhere hidden rivers softly glean.\nThe clouds embrace its rugged face,\nA timeless sentinel, in boundless space.\n\nOh, ancient stone, unyielding might,\nReflecting heavens, day and night.\nA silent poem, etched in time,\nWhere earth and sky, forever climb."
-    },
-    {
-      "id": "p003",
-      "title": "The Inkwell's Lament",
-      "author": "Penelope Scribbles",
-      "authorImage": "images/authors/penelope-scribbles.webp",
-      "excerpt": "A quiet plea, from ink-stained glass,\nFor words to flow, and moments pass.",
-      "content": "A quiet plea, from ink-stained glass,\nFor words to flow, and moments pass.\nMy depths are dark, my surface gleams,\nReflecting unwritten, countless dreams.\n\nI hold the tide of thought untold,\nThe stories waiting to unfold.\nA blank page beckons, stark and white,\nAnd I, the vessel of its light.\n\nOh, restless hand, and weary mind,\nCome, dip your quill, leave fear behind.\nLet silence break, let spirit sing,\nThe Inkwell's Lament, a whispered thing."
-    }
-  ],
-  "quotes": [
-    {
-      "id": "q001",
-      "text": "Write drunk, edit sober.",
-      "source": "Ernest Hemingway"
-    },
-    {
-      "id": "q002",
-      "text": "The first draft is just you telling yourself the story.",
-      "source": "Terry Pratchett"
-    },
-    {
-      "id": "q003",
-      "text": "There is no greater agony than bearing an untold story inside you.",
-      "source": "Maya Angelou"
-    },
-    {
-      "id": "q004",
-      "text": "If there's a book that you want to read, but it hasn't been written yet, then you must write it.",
-      "source": "Toni Morrison"
-    }
-  ],
-  "prompts": [
-    {
-      "id": "pr001",
-      "title": "The Forgotten Map",
-      "category": "Fantasy",
-      "excerpt": "You discover an ancient, hand-drawn map tucked inside an old book. It leads to a place not found on any modern atlas.",
-      "description": "You discover an ancient, hand-drawn map tucked inside an old book. It leads to a place not found on any modern atlas. What does the map reveal? Where does it lead? What challenges do you face on the journey? What treasure or truth do you find at the end?",
-      "guidance": [
-        "How did you feel when you first saw the map?",
-        "Describe the first landmark you encounter on the map's path.",
-        "What unexpected companion or foe do you meet?",
-        "What made the final destination compelling or surprising?"
+  "contentData": {
+    "stories": {
+      "title": "Short Stories Spotlight",
+      "ctaText": "Read More Stories",
+      "ctaLink": "library.html?category=stories",
+      "items": [
+        { "title": "The Whispering Woods", "author": "Elara Vance", "excerpt": "Deep within the ancient forest, whispers carried on the wind. It was said that the trees remembered forgotten spells and that lost travelers often found more than just a path, stumbling upon truths best left undisturbed by mortal ears." },
+        { "title": "City of Echoes", "author": "Kaelen Thorne", "excerpt": "In a sprawling metropolis now abandoned, the wind sang through skeletal skyscrapers. Every gust was an echo of a vibrant past, a haunting melody of lives once lived, now mere phantoms in the concrete canyons." },
+        { "title": "The Last Lighthouse Keeper", "author": "Meredith Finch", "excerpt": "Perched on the cliff's edge, old Thomas kept the light alive. His life was a solitary vigil against the tumultuous sea, but he guarded a secret far older and more tempestuous than any storm could ever be." },
+        { "title": "Beneath the Obsidian Lake", "author": "Rowan Blackwood", "excerpt": "Legend spoke of a sunken city, shimmering with dark magic, hidden beneath the placid surface of Obsidian Lake. Divers sought its treasures, but few returned, haunted by what they saw in its depths." },
+        { "title": "The Clockwork Heart", "author": "Silas Automaton", "excerpt": "In a world of steam and gears, a young inventor built a heart of intricate brass. It beat with perfect rhythm, yet longed for something more than mere mechanical precision. It yearned for true emotion." },
+        { "title": "A Taste of Stardust", "author": "Luna Starfall", "excerpt": "A tiny baker, with flour dusting her apron, discovered a rare ingredient – stardust, fallen from the night sky. Her pastries took on an otherworldly glow, enchanting all who tasted them with dreams of distant galaxies." },
+        { "title": "The Scholar's Secret Garden", "author": "Professor Alistair", "excerpt": "Behind the dusty library, a hidden gate led to a garden not of this world. Each plant bloomed with knowledge, and every flower whispered forgotten histories to those quiet enough to listen to its ancient tales." },
+        { "title": "Chronos's Apprentice", "author": "Time Weaver", "excerpt": "Young Elara became the apprentice to Chronos, the master of time itself. She learned to mend fractured moments and unravel tangled timelines, understanding that even the smallest choice could ripple through eternity." },
+        { "title": "The Whispering Library", "author": "Ink Scribe", "excerpt": "Books in this library didn't just contain stories; they whispered them. Each volume hummed with the voices of its characters, inviting readers into an immersive experience where imagination truly came alive." },
+        { "title": "Echoes of the Old World", "author": "Ancient Dreamer", "excerpt": "After the Great Silence, humanity clung to relics of the past. One artifact, a polished stone, pulsed with memories, allowing those who touched it to witness scenes from a bygone era, long forgotten." },
+        { "title": "The Cartographer's Dream", "author": "Atlas Meridian", "excerpt": "A cartographer, bored with known lands, began charting his dreams. His maps were filled with impossible mountains and rivers of light, leading explorers to realms beyond the waking world." },
+        { "title": "The Gilded Cage", "author": "Songbird Lyric", "excerpt": "A beautiful bird, trapped in a cage of pure gold, sang melodies that charmed kings. Yet, its songs were filled with longing, echoing a yearning for the boundless skies it could only dream of." }
       ]
     },
-    {
-      "id": "pr002",
-      "title": "A Day Without Color",
-      "category": "Slice of Life",
-      "excerpt": "One morning, you wake up to find the world has lost all its color. Everything is in shades of grey.",
-      "description": "One morning, you wake up to find the world has lost all its color. Everything is in shades of grey. How does this affect your day? What do you miss the most? Do you try to find a way to bring color back, or do you learn to live without it?",
-      "guidance": [
-        "Describe the initial shock of seeing a colorless world.",
-        "How do everyday objects or routines change without color?",
-        "Does this change affect your mood or perspective?",
-        "If color returns, how do you experience it differently?"
+    "quotes": {
+      "title": "Inspirational Quotes",
+      "ctaText": "Discover More Quotes",
+      "ctaLink": "library.html?category=quotes",
+      "items": [
+        { "text": "“The only way to do great work is to love what you do.”", "author": "- Steve Jobs" },
+        { "text": "“Either write something worth reading or do something worth writing.”", "author": "- Benjamin Franklin" },
+        { "text": "“You don't start out writing good stuff. You start out writing crap and thinking it's good stuff, and then gradually you get better.”", "author": "- Octavia E. Butler" },
+        { "text": "“Perfection is not attainable, but if we chase perfection we can catch excellence.”", "author": "- Vince Lombardi" },
+        { "text": "“The future belongs to those who believe in the beauty of their dreams.”", "author": "- Eleanor Roosevelt" },
+        { "text": "“It is never too late to be what you might have been.”", "author": "- George Eliot" },
+        { "text": "“The expert in anything was once a beginner.”", "author": "- Helen Hayes" },
+        { "text": "“Innovation distinguishes between a leader and a follower.”", "author": "- Steve Jobs" },
+        { "text": "“Believe you can and you're halfway there.”", "author": "- Theodore Roosevelt" },
+        { "text": "“The best way to predict the future is to create it.”", "author": "- Peter Drucker" },
+        { "text": "“Success is not final, failure is not fatal: it is the courage to continue that counts.”", "author": "- Winston S. Churchill" },
+        { "text": "“What you get by achieving your goals is not as important as what you become by achieving your goals.”", "author": "- Zig Ziglar" }
       ]
     },
-    {
-      "id": "pr003",
-      "title": "The Whispering Library",
-      "category": "Mystery/Horror",
-      "excerpt": "You get a job at an old library where the books seem to whisper when no one is around.",
-      "description": "You get a job at an old, cavernous library, dusty and filled with forgotten tomes. At night, when all is quiet, you start to hear faint whispers emanating from the bookshelves. Are they ghosts? The books themselves? What secrets do they reveal?",
-      "guidance": [
-        "What kind of whispers do you hear (words, murmurs, specific phrases)?",
-        "Do the whispers try to guide you, warn you, or trick you?",
-        "Describe a specific incident where the whispers lead you to something (or someone) unexpected.",
-        "What is the ultimate secret of the whispering library?"
+    "resources": {
+      "title": "Writing Resources & Guides",
+      "ctaText": "Access All Resources",
+      "ctaLink": "library.html?category=resources",
+      "items": [
+        { "title": "Character Development Guide", "guides": ["Build believable backstories.", "Develop unique character voices.", "Create compelling character arcs.", "Use psychological profiles effectively."] },
+        { "title": "Plotting Your Novel", "guides": ["Outline with the three-act structure.", "Master inciting incidents and turning points.", "Handle rising action and climax effectively.", "Craft satisfying resolutions."] },
+        { "title": "Overcoming Writer's Block", "guides": ["Try freewriting exercises.", "Change your writing environment.", "Read widely for inspiration.", "Set small, achievable goals daily."] },
+        { "title": "Mastering Dialogue", "guides": ["Ensure dialogue sounds natural.", "Use dialogue to reveal character.", "Advance the plot through conversation.", "Avoid exposition dumps in speech."] },
+        { "title": "World-Building Essentials", "guides": ["Design consistent magical systems.", "Develop believable cultures and societies.", "Create compelling geography.", "Incorporate history and mythology."] },
+        { "title": "Effective Editing Techniques", "guides": ["Self-edit for clarity and conciseness.", "Identify and eliminate passive voice.", "Strengthen verbs and nouns.", "Read aloud to catch awkward phrasing."] },
+        { "title": "Submitting Your Manuscript", "guides": ["Format your manuscript professionally.", "Write a compelling query letter.", "Research agents and publishers.", "Understand submission guidelines thoroughly."] },
+        { "title": "Building Your Author Platform", "guides": ["Create a professional author website.", "Engage with readers on social media.", "Build an email list.", "Network with other writers."] },
+        { "title": "Understanding POV", "guides": ["Choose the right point of view (first, third limited, omniscient).", "Maintain consistent POV.", "Avoid head-hopping.", "Use POV to control information flow."] },
+        { "title": "Show, Don't Tell", "guides": ["Use sensory details to describe.", "Convey emotions through actions, not statements.", "Illustrate settings vividly.", "Let readers infer conclusions."] },
+        { "title": "Developing Conflict", "guides": ["Identify internal and external conflicts.", "Raise the stakes for your characters.", "Introduce escalating obstacles.", "Ensure conflict drives the narrative."] },
+        { "title": "Crafting Strong Openings", "guides": ["Hook your reader immediately.", "Introduce core conflict early.", "Establish tone and setting.", "Start in media res for immediate action."] }
+      ]
+    },
+    "poems": {
+      "title": "Poetry Collections",
+      "ctaText": "Explore More Poetry",
+      "ctaLink": "library.html?category=poetry",
+      "items": [
+        { "image": 0, "title": "Ode to the Evening Star", "author": "Liam O'Connell", "excerpt": "A celestial journey through twilight hues, capturing the quiet grandeur of the fading light and the first glimmer of distant constellations. A meditation on solitude and cosmic beauty." },
+        { "image": 1, "title": "Whispers of Autumn", "author": "Seraphina Rose", "excerpt": "Leaves fall, secrets stir in the crisp air. A poignant collection exploring the beauty of decay, the melancholy of change, and the hidden resilience found in the turning seasons of life." },
+        { "image": 2, "title": "The Silent City", "author": "Alistair Finch", "excerpt": "Cobblestone streets remember forgotten tales. A haunting portrayal of an abandoned metropolis, where every shadow holds a memory and silence speaks louder than any bustling crowd ever could." },
+        { "image": 3, "title": "Ephemeral Dreams", "author": "Dr. Elysia Virtuoso", "excerpt": "A dive into the fleeting nature of subconscious journeys, where logic dissolves and imagination reigns. Each verse captures the elusive magic of dreams before they vanish with the dawn's first light." },
+        { "image": 4, "title": "The Seeker's Compass", "author": "Marcus Navigato", "excerpt": "Guided by an unseen hand, a soul searches for truth. This poem charts an internal quest, exploring existential questions and the relentless human desire to find meaning and direction." },
+        { "image": 5, "title": "Beneath the Willow's Tears", "author": "Willow Whisper", "excerpt": "A collection of tender verses inspired by the weeping willow, symbolizing grief, solace, and the quiet strength found in embracing sadness. A journey through loss to acceptance." },
+        { "image": 6, "title": "Stanzas of Starlight", "author": "Celeste Lumina", "excerpt": "Inspired by the vastness of the cosmos, these poems explore the wonder of galaxies, nebulae, and the tiny human experience under an infinite sky. A cosmic dance of words." },
+        { "image": 7, "title": "Ink & Petals", "author": "Flora Script", "excerpt": "Where the artistry of words meets the delicate beauty of botanicals. A series of poems inspired by flowers, each blooming with metaphors of growth, fragility, and vibrant life cycles." },
+        { "image": 8, "title": "The Forgotten Melody", "author": "Harmonius Chord", "excerpt": "A soulful exploration of a tune lost to time, yet lingering in the heart. This poem evokes nostalgia, the power of music, and the echoes of past joys and sorrows through sound." },
+        { "image": 9, "title": "Chronicles of Dust", "author": "Ashen Bard", "excerpt": "From the remnants of empires to the specks in the sunlight, these poems contemplate transience, history, and the enduring spirit of human legacy amidst the passage of time." },
+        { "image": 10, "title": "The Poet's Lantern", "author": "Lumiere Verse", "excerpt": "A guiding light through the darkness of unspoken thoughts. This collection illuminates the hidden corners of human emotion, shining a beacon on vulnerability and profound insights." },
+        { "image": 11, "title": "Whispers from the Abyss", "author": "Deep Sea Poet", "excerpt": "Diving into the psychological depths, these verses explore the mysteries of the unconscious mind, hidden fears, and the strange beauty found in the shadows of the human psyche." }
       ]
     }
+  },
+  "initialPoetryCards": [
+    { "image": 0, "title": "Ode to the Evening Star", "author": "Liam O'Connell", "excerpt": "A celestial journey through twilight hues..." },
+    { "image": 1, "title": "Whispers of Autumn", "author": "Seraphina Rose", "excerpt": "Leaves fall, secrets stir in the crisp air..." },
+    { "image": 2, "title": "The Silent City", "author": "Alistair Finch", "excerpt": "Cobblestone streets remember forgotten tales..." }
   ],
-  "resources": [
-    {
-      "id": "r001",
-      "title": "Crafting Compelling Characters",
-      "category": "Technique",
-      "excerpt": "Learn how to build characters that leap off the page and resonate with readers.",
-      "content": "Creating compelling characters is at the heart of every great story. It's not just about giving them a name and a job; it's about delving into their psyche, their past, their motivations, and their flaws. Start with a solid backstory: What shaped them? What are their deepest desires and fears? Give them contradictions – no one is purely good or evil. Show, don't tell, their personality through their actions and dialogue. Consider their internal and external conflicts. A character's journey, their growth or their tragic downfall, is what keeps readers invested. Remember, even minor characters can add depth and realism to your narrative. Make them memorable, make them human, and your story will sing."
-    },
-    {
-      "id": "r002",
-      "title": "Mastering Poetic Devices",
-      "category": "Poetry",
-      "excerpt": "Explore imagery, metaphor, rhythm, and other tools to elevate your poetry.",
-      "content": "Poetry is an art of precision and evocative language. Mastering poetic devices allows you to add layers of meaning, sound, and feeling to your work. Imagery appeals to the senses, painting vivid pictures with words. Metaphor and simile create powerful comparisons, drawing connections between disparate ideas. Alliteration and assonance add musicality and rhythm. Enjambment can build tension or create a sense of flow. Don't be afraid to experiment with form and structure, but always let the meaning guide your choices. Read widely, analyze how other poets use these devices, and then find your own unique voice within their rich tradition."
-    },
-    {
-      "id": "r003",
-      "title": "The Art of World-Building",
-      "category": "Technique",
-      "excerpt": "Discover the secrets to creating believable and immersive fictional worlds.",
-      "content": "World-building isn't just for fantasy or sci-fi; it's essential for any story that needs a believable setting, whether it's a bustling city or a quiet village. Start with the big picture: geography, climate, history, magic systems (if any), and societal structures. Then, zoom in on the details: daily life, customs, fashion, food, and language. Ensure consistency; every rule you establish for your world must be followed. Don't dump information; weave it naturally into the narrative. Consider how the world influences your characters and plot. A well-built world becomes a character in itself, enriching the reader's experience and providing fertile ground for countless stories."
-    }
-  ]
+  "initialPreviewContent": {
+    "story": { "text": "Discover captivating tales from emerging and established voices. Dive into worlds of fantasy, mystery, and drama.", "author": "A collection of authors" },
+    "quote": { "text": "“Inspiration exists, but it has to find you working.”", "author": "- Pablo Picasso" },
+    "resource": { "text": "Unlock your full writing potential with guides on plot, character, editing, and publishing.", "author": "Our expert team" }
+  }
 }
