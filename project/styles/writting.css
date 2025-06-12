@@ -68,11 +68,9 @@
     background: transparent;
 }
 
-
 .prompt-grid-carousel.expanded {
     grid-auto-flow: row;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
     overflow-x: hidden;
     scroll-snap-type: none;
     padding-bottom: 0;
@@ -99,7 +97,6 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.95);
 }
-
 
 .prompt-card .card-top-row {
     display: flex;
@@ -136,7 +133,6 @@
     margin-bottom: 0;
     text-align: left;
 }
-
 
 #universalModal .modal-content {
     max-width: 700px;
@@ -193,7 +189,6 @@
     left: 0;
     top: 0;
 }
-
 
 #start-scratch-section {
     background-color: var(--card-background);
@@ -284,7 +279,6 @@
     color: white;
 }
 
-
 #writting-area-section {
     padding: 40px 20px;
     background-color: var(--background-light);
@@ -333,7 +327,6 @@
 .selected-prompt-card-on-page::-webkit-scrollbar-track {
     background: transparent;
 }
-
 
 .selected-prompt-card-on-page h4 {
     font-family: var(--body-font);
@@ -446,7 +439,6 @@
     margin-top: 10px;
 }
 
-
 #thankYouContent h3 {
     font-family: var(--body-font);
     color: var(--primary-heading-color);
@@ -539,10 +531,16 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 980px) {
+    .prompts-sections-container {
+        gap: 20px;
+    }
+    .prompts-section {
+        padding: 20px;
+    }
     .prompt-grid-carousel {
-        grid-auto-columns: minmax(250px, 1fr);
+        grid-auto-columns: calc(50% - 12.5px);
+        gap: 25px;
     }
     .prompt-grid-carousel.expanded {
         grid-template-columns: repeat(2, 1fr);
@@ -553,13 +551,23 @@
     }
     .selected-prompt-card-on-page {
         max-height: 400px;
+        padding: 20px;
+        padding-right: 15px;
     }
     #writting-area-section .section-heading {
         font-size: 1.8em;
     }
+    #start-scratch-section {
+        margin: 20px 20px;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 650px) {
+    .prompts-sections-container {
+        padding: 15px;
+        gap: 15px;
+    }
     .prompts-section {
         padding: 15px;
     }
@@ -567,11 +575,15 @@
         font-size: 1.5em;
     }
     .prompt-grid-carousel {
-        grid-auto-columns: minmax(200px, 1fr);
+        grid-auto-columns: calc(50% - 7.5px);
+        gap: 15px;
     }
     .prompt-grid-carousel.expanded {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
+        overflow-x: hidden;
+        scroll-snap-type: none;
+        padding-bottom: 0;
     }
     .prompt-card {
         padding: 15px;
@@ -623,6 +635,8 @@
     .modal-back-button {
         width: 100%;
         max-width: 250px;
+        font-size: 0.95em;
+        padding: 10px 20px;
     }
     #start-scratch-section {
         padding: 15px;
@@ -638,6 +652,145 @@
         padding: 10px 12px;
     }
     #use-scratch-button {
+        font-size: 0.85em;
+        padding: 8px 15px;
+    }
+    #thankYouContent h3 {
+        font-size: 1.8em;
+    }
+    #thankYouContent p {
+        font-size: 1em;
+    }
+    .submitted-story-preview {
+        max-height: 120px;
+        padding: 8px;
+    }
+    #thankYouContent .submission-details {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prompts-sections-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    .prompts-section {
+        padding: 10px;
+        border-radius: 15px;
+    }
+    .section-header .section-heading {
+        font-size: 1.3em;
+    }
+    .prompt-grid-carousel {
+        grid-auto-columns: calc(50% - 5px);
+        gap: 10px;
+    }
+    .prompt-grid-carousel.expanded {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        overflow-x: hidden;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+    }
+    .prompt-card {
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .prompt-card .prompt-title {
+        font-size: 1em;
+    }
+    .prompt-card .prompt-excerpt {
+        font-size: 0.8em;
+        -webkit-line-clamp: 2;
+    }
+    #universalModal .modal-content {
+        padding: 15px;
+        border-radius: 12px;
+    }
+    #universalModal #modalTitle {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    .modal-full-prompt .full-prompt-text,
+    .modal-full-prompt .prompt-guides li {
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+    .modal-full-prompt h4 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        padding-bottom: 3px;
+    }
+    #writting-area-section {
+        padding: 15px 10px;
+    }
+    #writting-area-section .section-heading {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+    .selected-prompt-card-on-page,
+    .writting-pad-container {
+        padding: 15px;
+    }
+    .selected-prompt-card-on-page h4 {
+        font-size: 1.1em;
+        padding-bottom: 8px;
+    }
+    .selected-prompt-card-on-page p {
+        font-size: 0.9em;
+    }
+    .selected-prompt-card-on-page .selected-prompt-guides {
+        font-size: 0.75em;
+    }
+    #writtingTextarea {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+    .name-input-container label,
+    #userNameInput {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+    #submitWrittingButton {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    #start-scratch-section {
+        padding: 10px;
+        margin: 15px 10px;
+    }
+    #start-scratch-section .section-heading {
+        font-size: 1.3em;
+    }
+    .scratch-options-container p,
+    .scratch-options-container label,
+    .scratch-options-container input[type="text"] {
+        font-size: 0.85em;
+        padding: 8px 10px;
+    }
+    #use-scratch-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+    #thankYouContent h3 {
+        font-size: 1.6em;
+    }
+    #thankYouContent p {
+        font-size: 0.9em;
+    }
+    .submitted-story-preview {
+        max-height: 100px;
+        padding: 6px;
+        font-size: 0.85em;
+    }
+    .modal-buttons {
+        gap: 8px;
+        margin-top: 15px;
+    }
+    .modal-cta-button,
+    .modal-secondary-button,
+    .modal-back-button {
         font-size: 0.85em;
         padding: 8px 15px;
     }
