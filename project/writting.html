@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWeave Hub - Create & Write</title>
+    <meta name="description" content="Ignite your creativity with writing prompts for stories, poems, and quotes. Get inspired and start writing on StoryWeave Hub!">
+    <meta name="author" content="Nathaniel Chigumbura">
+
+    <meta property="og:title" content="StoryWeave Hub - Create & Write">
+    <meta property="og:description" content="Discover, create, and share your unique narratives with a vibrant community of writers and poets.">
+    <meta property="og:url" content="https://nchigumbura.github.io/wdd231/project/writting.html">
+    <meta property="og:image" content="https://nchigumbura.github.io/wdd231/project/images/written.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="StoryWeave Hub">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StoryWeave Hub - Create & Write">
+    <meta name="twitter:description" content="Discover, create, and share your unique narratives with a vibrant community of writers and poets.">
+    <meta name="twitter:image" content="https://nchigumbura.github.io/storyweavehub/images/twitter-image.webp">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/writting.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">Creative Writing & StoryTelling</h1>
+            <nav class="main-nav">
+                <button class="hamburger-menu" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="writting.html" class="active">Create & Write</a></li>
+                    <li><a href="community.html">Explore Community Library</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2 class="welcome-message">Unleash Your Imagination</h2>
+            <p class="tagline">Explore a curated collection of writing prompts to spark your next masterpiece. From compelling stories to poignant quotes, find your inspiration here.</p>
+        </section>
+
+        <section class="prompts-sections-container">
+            <section class="prompts-section" id="story-prompts">
+                <div class="section-header">
+                    <h3 class="section-heading">Story Prompts</h3>
+                    <span class="card-arrow more-prompts-arrow" data-category="stories">›</span>
+                </div>
+                <div class="prompt-grid-carousel" data-category="stories">
+                </div>
+            </section>
+
+            <section class="prompts-section" id="poem-prompts">
+                <div class="section-header">
+                    <h3 class="section-heading">Poem Prompts</h3>
+                    <span class="card-arrow more-prompts-arrow" data-category="poems">›</span>
+                </div>
+                <div class="prompt-grid-carousel" data-category="poems">
+                </div>
+            </section>
+
+            <section class="prompts-section" id="quote-prompts">
+                <div class="section-header">
+                    <h3 class="section-heading">Quote Prompts</h3>
+                    <span class="card-arrow more-prompts-arrow" data-category="quotes">›</span>
+                </div>
+                <div class="prompt-grid-carousel" data-category="quotes">
+                </div>
+            </section>
+        </section>
+
+        <section class="prompts-section" id="start-scratch-section">
+            <div class="section-header">
+                <h3 class="section-heading">Or Start from Scratch!</h3>
+                <span class="card-arrow more-prompts-arrow" id="toggle-scratch-button">›</span>
+            </div>
+            <div class="scratch-options-container" id="scratch-options-container">
+                <p>Don't need a prompt? Create your own story details here:</p>
+                <div class="input-group">
+                    <label for="scratchStoryTitle">Your Story Title:</label>
+                    <input type="text" id="scratchStoryTitle" placeholder="e.g., The Whispering Woods">
+                </div>
+                <div class="input-group">
+                    <label for="scratchStoryType">Story Type:</label>
+                    <input type="text" id="scratchStoryType" placeholder="e.g., Fantasy, Sci-Fi, Romance">
+                </div>
+                <button class="cta-button" id="use-scratch-button">Use My Own Idea</button>
+            </div>
+        </section>
+
+
+        <section id="writting-area-section">
+            <h2 class="section-heading">Your Creative Space</h2>
+            <div class="writting-area-grid">
+                <div class="selected-prompt-card-on-page" id="selectedPromptDisplay">
+                    <h4>No Prompt Selected</h4>
+                    <p>Click on a prompt above to see its details and guidelines here, then start writing!</p>
+                    <ul class="selected-prompt-guides">
+                    </ul>
+                </div>
+                <div class="writting-pad-container">
+                    <div class="name-input-container">
+                        <label for="userNameInput">Your Name (optional):</label>
+                        <input type="text" id="userNameInput" placeholder="Enter your name or pen name">
+                    </div>
+
+                    <textarea id="writtingTextarea" placeholder="Start writing your masterpiece here..." rows="18"></textarea>
+                    <button class="cta-button" id="submitWrittingButton">Submit Your Story</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> StoryWeave Hub</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+
+    <div id="universalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-body-content" id="modalBody">
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-back-button">Back</button>
+                <button id="select-prompt-button" class="modal-cta-button">Select Prompt</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body-content" id="thankYouContent">
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-cta-button" id="publish-story-button">Publish to Community</button>
+                <button class="modal-secondary-button" id="edit-story-button">Edit Story</button>
+                <button class="modal-back-button" id="do-not-publish-button">Do Not Publish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/utilities.js" defer></script>
+    <script src="scripts/writting.js" defer></script>
+</body>
+</html>

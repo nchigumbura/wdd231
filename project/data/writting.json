@@ -1,0 +1,372 @@
+{
+  "prompts": [
+    {
+      "id": "story-1",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Whispering Woods",
+      "excerpt": "A lone traveler stumbles upon an ancient forest rumored to whisper secrets...",
+      "full_prompt": "A lone traveler stumbles upon an ancient forest rumored to whisper secrets to those who listen. What secrets does the forest reveal, and how does it change the traveler's journey?",
+      "guides": [
+        "What is the traveler's initial motivation for entering the woods?",
+        "What specific whispers or sounds do they hear?",
+        "How do the whispers affect their senses and emotions?",
+        "Does the forest have a sentient presence or is it merely echoing nature?",
+        "What tangible or intangible gift/curse does the traveler receive?",
+        "How does this experience alter their perception of the world and their destiny?"
+      ]
+    },
+    {
+      "id": "story-2",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Last Artisan",
+      "excerpt": "In a world dominated by automation, one artisan fights to preserve a dying craft...",
+      "full_prompt": "In a future dominated by automation and mass production, a single artisan stubbornly practices a craft deemed obsolete. Explore their struggle to keep the tradition alive and its impact on a cynical society.",
+      "guides": [
+        "What is the specific craft being practiced?",
+        "What challenges does the artisan face (e.g., resources, demand, ridicule)?",
+        "Who is their main antagonist or opposing force?",
+        "How does their craft offer something automation cannot?",
+        "Does a significant event or character force society to reconsider the artisan's value?",
+        "What is the ultimate fate of the craft and the artisan?"
+      ]
+    },
+    {
+      "id": "story-3",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "A Message in a Bottle",
+      "excerpt": "A message washes ashore from a distant, unknown land...",
+      "full_prompt": "A mysterious message in a bottle washes ashore, containing cryptic clues about a hidden treasure or an urgent plea from a lost civilization. Who sent it, and what adventure does it spark?",
+      "guides": [
+        "Where and when is the bottle discovered?",
+        "What are the cryptic clues or urgent pleas within the message?",
+        "Who finds the bottle, and what is their background?",
+        "What obstacles or dangers arise during the pursuit of the message's origin/treasure?",
+        "Is the sender still alive? What is their story?",
+        "What is the ultimate discovery or outcome of the adventure?"
+      ]
+    },
+    {
+      "id": "story-4",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Time-Traveling Pet",
+      "excerpt": "Your ordinary pet suddenly gains the ability to travel through time...",
+      "full_prompt": "Your beloved, seemingly ordinary pet suddenly develops the ability to time travel, leading to hilarious mishaps, heartwarming reunions, or unexpected dangers. How do you cope with this new reality?",
+      "guides": [
+        "What type of pet is it, and what is its personality?",
+        "How does the pet discover its ability?",
+        "What are some comical situations that arise from its time travel?",
+        "Are there any historical or future consequences?",
+        "Do you try to control the pet's ability or let it roam free?",
+        "How does this power affect your bond with your pet?"
+      ]
+    },
+    {
+      "id": "story-5",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Dream Weaver's Apprentice",
+      "excerpt": "In a city where dreams can be crafted, a young apprentice learns the trade...",
+      "full_prompt": "In a fantastical city where professional 'Dream Weavers' craft and sell dreams to citizens, a young apprentice struggles with the ethics and responsibilities of their powerful new role.",
+      "guides": [
+        "How are dreams crafted? What are their ingredients?",
+        "What kinds of dreams are most popular?",
+        "What is the apprentice's personal background and motivation for joining?",
+        "What ethical dilemmas do they face (e.g., forbidden dreams, manipulating memories)?",
+        "Is there a black market for dreams, and do they get involved?",
+        "How do their choices impact the dream industry or the city's inhabitants?"
+      ]
+    },
+    {
+      "id": "story-6",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The City Beneath the Lake",
+      "excerpt": "Divers discover an ancient, thriving city hidden at the bottom of a vast lake...",
+      "full_prompt": "Divers exploring a mysterious, unusually deep lake discover an ancient, thriving city hidden beneath its surface, completely untouched by modern civilization. What happens when two worlds collide?",
+      "guides": [
+        "How did the city remain hidden for so long?",
+        "What are the technologies, culture, and social structure of the underwater city?",
+        "What is the initial reaction of the city's inhabitants to the divers?",
+        "Are there any dangers or threats from the lake itself?",
+        "What conflicts or collaborations arise between the two civilizations?",
+        "What is the ultimate fate of the lake city and its secrets?"
+      ]
+    },
+    {
+      "id": "story-7",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Inventor's Last Wish",
+      "excerpt": "An eccentric inventor leaves behind a device with one final, cryptic message...",
+      "full_prompt": "An eccentric, reclusive inventor passes away, leaving behind a strange device and a single, cryptic instruction for their heir. Decipher the message and activate the invention.",
+      "guides": [
+        "What kind of device is it? What does it look like?",
+        "What is the nature of the cryptic instruction?",
+        "Who is the heir, and what is their relationship to the inventor?",
+        "What challenges or puzzles must be solved to activate the device?",
+        "What unexpected consequences arise once the device is activated?",
+        "Does the invention fulfill the inventor's wish, or does it have a different purpose?"
+      ]
+    },
+    {
+      "id": "story-8",
+      "category": "stories",
+      "icon": "images/story-icon.png",
+      "title": "The Map to Nowhere",
+      "excerpt": "You find an antique map that leads to places that shouldn't exist...",
+      "full_prompt": "You discover an antique map that, when unfolded, reveals pathways and locations that defy geography and known reality. Where does it lead, and what do you find there?",
+      "guides": [
+        "Where do you find the map, and how do you realize its unusual nature?",
+        "Describe one or two of the impossible locations the map points to.",
+        "What dangers or strange phenomena do you encounter on your journey?",
+        "Are there other travelers or inhabitants in these 'nowhere' places?",
+        "What is the purpose of the map, and who created it?",
+        "How does exploring these places change your perception of reality?"
+      ]
+    },
+    {
+      "id": "poem-1",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "Echoes in the Rain",
+      "excerpt": "Write a poem about the sound of rain and the memories it evokes.",
+      "full_prompt": "Write a poem exploring the sensory experience of rain and its ability to conjure forgotten memories or emotions.",
+      "guides": [
+        "Focus on specific sounds, smells, and sights of rain.",
+        "What emotions does the rain bring forth (e.g., nostalgia, melancholy, peace)?",
+        "Connect the rain to a specific memory or feeling.",
+        "Use imagery related to water, cleansing, or growth.",
+        "Consider the rhythm and flow of your words to mimic rain."
+      ]
+    },
+    {
+      "id": "poem-2",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "The Silent Language of Trees",
+      "excerpt": "A poem about the unspoken wisdom and communication of nature.",
+      "full_prompt": "Craft a poem about the silent, ancient wisdom and interconnectedness of trees and the natural world.",
+      "guides": [
+        "Personify trees or other natural elements.",
+        "Explore themes of resilience, history, or cyclical change.",
+        "Use metaphors for roots, branches, and leaves.",
+        "What lessons can humanity learn from nature's quiet communication?",
+        "Focus on specific details like bark, rustling leaves, or the passage of seasons."
+      ]
+    },
+    {
+      "id": "poem-3",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "City Lights, Lonely Souls",
+      "excerpt": "A poem contrasting the vibrancy of a city with feelings of isolation.",
+      "full_prompt": "Write a poem that contrasts the dazzling, bustling energy of a city at night with the hidden feelings of loneliness or anonymity experienced by its inhabitants.",
+      "guides": [
+        "Use vivid descriptions of city lights, sounds, and crowds.",
+        "Explore the feeling of being small or unseen amidst many.",
+        "What specific moments highlight the contrast (e.g., a quiet window in a tall building)?",
+        "Consider the internal monologue of a lonely individual.",
+        "How do the city's elements (e.g., sirens, traffic, skyscrapers) contribute to the mood?"
+      ]
+    },
+    {
+      "id": "poem-4",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "Ode to a Lost Art",
+      "excerpt": "Honor a craft, tradition, or skill that is slowly fading from the world.",
+      "full_prompt": "Compose an ode to a lost or dying art form, craft, or tradition, celebrating its beauty, complexity, and the melancholy of its fading presence.",
+      "guides": [
+        "Choose a specific art or tradition (e.g., calligraphy, clockmaking, folk tales).",
+        "Describe its unique qualities and the skill required.",
+        "Express the emotional impact of its decline.",
+        "Imagine its practitioners or the memories it evokes.",
+        "Use respectful and elegiac language."
+      ]
+    },
+    {
+      "id": "poem-5",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "The Weight of a Secret",
+      "excerpt": "A poem about the burden of holding a hidden truth.",
+      "full_prompt": "Write a poem about the emotional and psychological burden of keeping a significant secret. Explore its weight, its impact on relationships, and the longing for release.",
+      "guides": [
+        "Use metaphors for the secret (e.g., a stone, a shadow, a lock).",
+        "Describe the physical manifestations of the burden (e.g., sleeplessness, anxiety).",
+        "How does the secret affect interactions with others?",
+        "Is there a desire to reveal it, or a fear of consequences?",
+        "Consider the moment of revelation, or the perpetual carrying of the secret."
+      ]
+    },
+    {
+      "id": "poem-6",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "A Future Without Us",
+      "excerpt": "Imagine the world centuries after humanity's disappearance.",
+      "full_prompt": "Envision and describe the natural world centuries after humanity's disappearance. What remains of our civilization, and how does nature reclaim the earth?",
+      "guides": [
+        "Focus on specific natural elements reclaiming urban landscapes.",
+        "What iconic human structures would remain, and how would they be transformed?",
+        "Are there any lingering traces of human impact (e.g., plastic, pollution)?",
+        "Consider the sounds, sights, and feelings of a rewilded world.",
+        "Is there a sense of peace, melancholy, or indifference in this future?"
+      ]
+    },
+    {
+      "id": "poem-7",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "The Scent of Home",
+      "excerpt": "Explore the powerful memories and emotions triggered by a familiar scent.",
+      "full_prompt": "Write a poem about a specific scent that instantly transports you back to a particular place, time, or emotion associated with 'home'.",
+      "guides": [
+        "Identify a very specific scent (e.g., old books, baking bread, fresh cut grass).",
+        "Describe the memories and feelings it evokes in detail.",
+        "Use sensory language to make the scent palpable to the reader.",
+        "How does the present moment contrast with the memory?",
+        "Explore the concept of home as a physical place or a feeling."
+      ]
+    },
+    {
+      "id": "poem-8",
+      "category": "poems",
+      "icon": "images/poem-icon.png",
+      "title": "Beyond the Veil of Sleep",
+      "excerpt": "A poem about the surreal and often illogical world of dreams.",
+      "full_prompt": "Delve into the surreal, illogical, and often profound world of dreams. Write a poem about the journey beyond consciousness and the landscapes of the sleeping mind.",
+      "guides": [
+        "Describe vivid, dreamlike imagery (e.g., shifting landscapes, impossible creatures).",
+        "Explore the emotions experienced in dreams (e.g., fear, joy, confusion).",
+        "Do dreams hold hidden meanings or act as a release?",
+        "How do dreams contrast with waking reality?",
+        "Consider the feeling of waking up and trying to recall a fading dream."
+      ]
+    },
+    {
+      "id": "quote-1",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "The Power of Silence",
+      "excerpt": "Compose a reflective quote on the strength found in quiet moments.",
+      "full_prompt": "Compose a concise, impactful quote that reflects on the profound strength, wisdom, or peace found in moments of silence and stillness.",
+      "guides": [
+        "Consider the contrast between noise and quiet.",
+        "What benefits does silence offer (e.g., clarity, healing, introspection)?",
+        "Use strong verbs and evocative adjectives.",
+        "Aim for a memorable and thought-provoking statement.",
+        "Can be a single sentence or a very short paragraph."
+      ]
+    },
+    {
+      "id": "quote-2",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "Growth from Adversity",
+      "excerpt": "Write a quote about finding strength and learning from challenges.",
+      "full_prompt": "Craft an inspiring quote about how personal growth often emerges from overcoming difficulties, challenges, or moments of adversity.",
+      "guides": [
+        "Use metaphors for challenges (e.g., storms, mountains, fires).",
+        "Focus on resilience and transformation.",
+        "Emphasize the positive outcome of struggle.",
+        "Keep it concise and universally relatable.",
+        "Think about what you've learned from tough times."
+      ]
+    },
+    {
+      "id": "quote-3",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "The Art of Imperfection",
+      "excerpt": "A quote celebrating flaws, mistakes, and the beauty of being human.",
+      "full_prompt": "Develop a quote that celebrates imperfection, flaws, and mistakes as essential components of beauty, authenticity, or the human experience.",
+      "guides": [
+        "Challenge the notion of perfection.",
+        "Highlight the charm or wisdom found in blemishes.",
+        "Connect imperfection to individuality or genuine character.",
+        "Use words like 'unique,' 'authentic,' 'real.'",
+        "Can be a short, poetic statement."
+      ]
+    },
+    {
+      "id": "quote-4",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "Beyond the Horizon",
+      "excerpt": "Inspire exploration and embracing the unknown with a short quote.",
+      "full_prompt": "Write a quote that encourages exploration, curiosity, and the courage to venture into the unknown, symbolizing what lies 'beyond the horizon.'",
+      "guides": [
+        "Focus on themes of adventure, discovery, and potential.",
+        "Use imagery related to journeys, skies, or distant lands.",
+        "Inspire a sense of wonder and possibility.",
+        "Keep it succinct and impactful.",
+        "What is the feeling of stepping into new territory?"
+      ]
+    },
+    {
+      "id": "quote-5",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "The Language of Kindness",
+      "excerpt": "A quote on the universal impact and simplicity of kindness.",
+      "full_prompt": "Compose a quote about the universal power and profound simplicity of kindness, emphasizing its ability to transcend barriers and create positive change.",
+      "guides": [
+        "Focus on actions rather than just words.",
+        "Highlight the ripple effect of kindness.",
+        "Consider kindness as a form of communication.",
+        "Use words like 'gentle,' 'bridge,' 'light.'",
+        "Think about how small acts can have big impacts."
+      ]
+    },
+    {
+      "id": "quote-6",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "Moments, Not Years",
+      "excerpt": "Reflect on how the quality of moments shapes life, not just duration.",
+      "full_prompt": "Write a philosophical quote reflecting on the idea that life's richness comes from the quality of individual moments and experiences, rather than merely the passage of time or number of years.",
+      "guides": [
+        "Contrast quantity (years) with quality (moments).",
+        "Emphasize presence and experience.",
+        "Use imagery related to depth, flavor, or impact.",
+        "Suggest a shift in perspective on what truly matters.",
+        "Consider the fleeting nature of time and the permanence of experience."
+      ]
+    },
+    {
+      "id": "quote-7",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "The Unwritten Story",
+      "excerpt": "A quote about the potential and power of what has not yet been created.",
+      "full_prompt": "Craft a quote about the infinite potential of the 'unwritten story' – the ideas, dreams, and creations that exist only in our minds until we bring them to life.",
+      "guides": [
+        "Focus on imagination, creativity, and possibility.",
+        "Use metaphors related to blank pages, seeds, or untouched canvases.",
+        "Inspire action and the realization of potential.",
+        "Highlight the power of inner worlds.",
+        "What does it feel like to bring something new into existence?"
+      ]
+    },
+    {
+      "id": "quote-8",
+      "category": "quotes",
+      "icon": "images/quote-icon.png",
+      "title": "Finding Light in the Shadows",
+      "excerpt": "An uplifting quote about hope and resilience in dark times.",
+      "full_prompt": "Write an uplifting quote about the human capacity to find hope, beauty, or inner strength even amidst darkness, struggle, or despair.",
+      "guides": [
+        "Use light and shadow imagery.",
+        "Focus on resilience, perspective, and inner fortitude.",
+        "Suggest that darkness can highlight the light.",
+        "Offer a message of comfort and perseverance.",
+        "Think about how challenges can reveal hidden strengths."
+      ]
+    }
+  ]
+}

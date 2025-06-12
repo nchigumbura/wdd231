@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWeave Hub - Community Library</title>
+    <meta name="description" content="Explore stories, poems, and quotes shared by our community of writers. Find inspiration and new narratives on StoryWeave Hub.">
+    <meta name="author" content="Nathaniel Chigumbura">
+
+    <meta property="og:title" content="StoryWeave Hub - Community Library">
+    <meta property="og:description" content="Discover, read, and share unique narratives with a vibrant community of writers and poets.">
+    <meta property="og:url" content="https://nchigumbura.github.io/wdd231/project/community.html">
+    <meta property="og:image" content="https://nchigumbura.github.io/storyweavehub/images/community.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="StoryWeave Hub">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StoryWeave Hub - Community Library">
+    <meta name="twitter:description" content="Discover, read, and share unique narratives with a vibrant community of writers and poets.">
+    <meta name="twitter:image" content="https://nchigumbura.github.io/storyweavehub/images/twitter-community.webp">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/community.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">Creative Writing & StoryTelling</h1>
+            <nav class="main-nav">
+                <button class="hamburger-menu" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="writting.html">Create & Write</a></li>
+                    <li><a href="community.html" class="active">Explore Community Library</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2 class="welcome-message">Community Library</h2>
+            <p class="tagline">Dive into the stories, poems, and quotes shared by our talented community!</p>
+        </section>
+
+        <section id="community-stories-section">
+            <h3 class="section-heading">All Published Works</h3>
+            <div id="publishedStoriesContainer" class="story-grid">
+                <p id="loadingMessage">Loading stories...</p>
+                <p id="noStoriesMessage" style="display: none;">No stories published yet. Be the first to share your masterpiece!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> StoryWeave Hub</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+
+    <script src="scripts/utilities.js" defer></script>
+    <script src="scripts/community.js" defer></script>
+</body>
+</html>

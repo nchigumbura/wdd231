@@ -1,0 +1,644 @@
+.prompts-sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.prompts-section {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    padding: 25px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--subtle-divider);
+}
+
+.section-header .section-heading {
+    margin: 0;
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.card-arrow {
+    font-size: 2em;
+    color: var(--soft-blue);
+    cursor: pointer;
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.card-arrow:hover {
+    transform: translateX(5px);
+}
+
+.prompt-grid-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+    transition: all var(--transition-duration) ease-in-out;
+    scrollbar-width: thin;
+    scrollbar-color: var(--subtle-divider) transparent;
+}
+
+.prompt-grid-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.prompt-grid-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--subtle-divider);
+    border-radius: 10px;
+}
+
+.prompt-grid-carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.prompt-grid-carousel.expanded {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    overflow-x: hidden;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+}
+
+.prompt-card {
+    background: var(--light-grey-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out;
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.prompt-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+
+.prompt-card .card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.prompt-card .prompt-title {
+    font-family: var(--body-font);
+    font-size: 1.3em;
+    color: var(--primary-heading-color);
+    margin: 0;
+    line-height: 1.3;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.prompt-card .card-arrow {
+    font-size: 1.8em;
+    color: var(--main-text-color);
+    flex-shrink: 0;
+}
+
+.prompt-card .prompt-excerpt {
+    font-size: 0.95em;
+    color: var(--dark-text-grey);
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+#universalModal .modal-content {
+    max-width: 700px;
+    width: 90%;
+    padding: 30px;
+}
+
+#universalModal #modalTitle {
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.modal-full-prompt .full-prompt-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--dark-text-grey);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.modal-full-prompt h4 {
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--subtle-divider);
+    padding-bottom: 5px;
+}
+
+.modal-full-prompt .prompt-guides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--main-text-color);
+}
+
+.modal-full-prompt .prompt-guides li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.modal-full-prompt .prompt-guides li::before {
+    content: '\2022';
+    color: var(--accent-elements);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+#start-scratch-section {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    padding: 25px;
+    margin: 30px 20px;
+}
+
+#start-scratch-section .section-header {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+#start-scratch-section .section-heading {
+    color: var(--soft-blue);
+}
+
+#toggle-scratch-button {
+    color: var(--soft-blue);
+}
+
+.scratch-options-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    padding-top: 0;
+    margin-top: 15px;
+    border-top: 1px dashed var(--subtle-divider);
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.scratch-options-container.expanded {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+.scratch-options-container p {
+    font-size: 0.95em;
+    color: var(--dark-text-grey);
+    margin-bottom: 5px;
+}
+
+.scratch-options-container .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.scratch-options-container label {
+    font-family: var(--body-font);
+    font-size: 1em;
+    color: var(--primary-heading-color);
+    font-weight: 500;
+}
+
+.scratch-options-container input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid var(--subtle-divider);
+    border-radius: 15px;
+    font-family: var(--body-font);
+    font-size: 1.05em;
+    color: var(--dark-text-grey);
+    background-color: var(--light-grey-background);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+}
+
+.scratch-options-container input[type="text"]:focus {
+    outline: none;
+    border-color: var(--soft-blue);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(93, 167, 219, 0.2);
+}
+
+#use-scratch-button {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 0.95em;
+    background-color: var(--accent-elements);
+    color: white;
+}
+
+
+#writting-area-section {
+    padding: 40px 20px;
+    background-color: var(--background-light);
+    border-top: 1px solid var(--subtle-divider);
+}
+
+#writting-area-section .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: var(--primary-heading-color);
+}
+
+.writting-area-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.selected-prompt-card-on-page {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    padding: 25px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.selected-prompt-card-on-page::-webkit-scrollbar {
+    width: 8px;
+}
+
+.selected-prompt-card-on-page::-webkit-scrollbar-thumb {
+    background-color: var(--subtle-divider);
+    border-radius: 10px;
+}
+
+.selected-prompt-card-on-page::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.selected-prompt-card-on-page h4 {
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    margin: 0;
+    font-size: 1.4em;
+    text-align: center;
+    border-bottom: 1px dashed var(--subtle-divider);
+    padding-bottom: 10px;
+}
+
+.selected-prompt-card-on-page p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--main-text-color);
+    margin: 0;
+    text-align: justify;
+}
+
+.selected-prompt-card-on-page .selected-prompt-guides {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--main-text-color);
+}
+
+.selected-prompt-card-on-page .selected-prompt-guides li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.selected-prompt-card-on-page .selected-prompt-guides li::before {
+    content: '•';
+    color: var(--accent-elements);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.name-input-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.name-input-container label {
+    font-family: var(--body-font);
+    font-size: 1em;
+    color: var(--primary-heading-color);
+    font-weight: 500;
+}
+
+#userNameInput {
+    padding: 12px 15px;
+    border: 1px solid var(--subtle-divider);
+    border-radius: 15px;
+    font-family: var(--body-font);
+    font-size: 1.05em;
+    color: var(--dark-text-grey);
+    background-color: var(--light-grey-background);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+}
+
+#userNameInput:focus {
+    outline: none;
+    border-color: var(--soft-blue);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(93, 167, 219, 0.2);
+}
+
+.writting-pad-container {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--glass-border);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#writtingTextarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--subtle-divider);
+    border-radius: 15px;
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--dark-text-grey);
+    resize: vertical;
+    flex-grow: 1;
+    background-color: var(--light-grey-background);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+}
+
+#writtingTextarea:focus {
+    outline: none;
+    border-color: var(--soft-blue);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(93, 167, 219, 0.2);
+}
+
+#submitWrittingButton {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+
+#thankYouContent h3 {
+    font-family: var(--body-font);
+    color: var(--primary-heading-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#thankYouContent p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+#thankYouContent .submission-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(93, 167, 219, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(93, 167, 219, 0.3);
+}
+
+#thankYouContent .submission-details strong {
+    color: var(--primary-heading-color);
+}
+
+.submitted-story-preview {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid var(--subtle-divider);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--light-grey-background);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.modal-cta-button,
+.modal-secondary-button,
+.modal-back-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-family: var(--body-font);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+}
+
+.modal-cta-button {
+    background-color: var(--accent-elements);
+    color: white;
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.2);
+}
+
+.modal-cta-button:hover {
+    background-color: var(--darker-accent-elements);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(var(--accent-rgb), 0.3);
+}
+
+.modal-secondary-button {
+    background-color: var(--soft-blue);
+    color: white;
+    box-shadow: 0 4px 10px rgba(var(--soft-blue-rgb), 0.2);
+}
+
+.modal-secondary-button:hover {
+    background-color: var(--darker-soft-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(var(--soft-blue-rgb), 0.3);
+}
+
+.modal-back-button {
+    background-color: var(--dark-grey);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-back-button:hover {
+    background-color: var(--primary-heading-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 980px) {
+    .prompt-grid-carousel {
+        grid-auto-columns: minmax(250px, 1fr);
+    }
+    .prompt-grid-carousel.expanded {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .writting-area-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .selected-prompt-card-on-page {
+        max-height: 400px;
+    }
+    #writting-area-section .section-heading {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 650px) {
+    .prompts-section {
+        padding: 15px;
+    }
+    .section-header .section-heading {
+        font-size: 1.5em;
+    }
+    .prompt-grid-carousel {
+        grid-auto-columns: minmax(200px, 1fr);
+    }
+    .prompt-grid-carousel.expanded {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+    .prompt-card {
+        padding: 15px;
+    }
+    .prompt-card .prompt-title {
+        font-size: 1.1em;
+    }
+    .prompt-card .prompt-excerpt {
+        font-size: 0.85em;
+    }
+    #universalModal .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    #universalModal #modalTitle {
+        font-size: 1.5em;
+    }
+    .modal-full-prompt .full-prompt-text,
+    .modal-full-prompt .prompt-guides li {
+        font-size: 0.9em;
+    }
+    #writting-area-section {
+        padding: 20px 15px;
+    }
+    #writting-area-section .section-heading {
+        font-size: 1.6em;
+    }
+    .selected-prompt-card-on-page,
+    .writting-pad-container {
+        padding: 20px;
+    }
+    #writtingTextarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+    .selected-prompt-card-on-page h4 {
+        font-size: 1.2em;
+    }
+    .selected-prompt-card-on-page .selected-prompt-guides {
+        font-size: 0.8em;
+    }
+    .modal-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .modal-cta-button,
+    .modal-secondary-button,
+    .modal-back-button {
+        width: 100%;
+        max-width: 250px;
+    }
+    #start-scratch-section {
+        padding: 15px;
+        margin: 20px 15px;
+    }
+    #start-scratch-section .section-heading {
+        font-size: 1.5em;
+    }
+    .scratch-options-container p,
+    .scratch-options-container label,
+    .scratch-options-container input[type="text"] {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+    #use-scratch-button {
+        font-size: 0.85em;
+        padding: 8px 15px;
+    }
+}
