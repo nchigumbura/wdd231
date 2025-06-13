@@ -156,26 +156,28 @@ h2 {
     text-align: center;
 }
 
-.card {
+.base-card {
     background: var(--card-background);
     border-radius: var(--border-radius-main);
     box-shadow: var(--shadow-soft);
+    border: 1px solid var(--glass-border);
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    backdrop-filter: blur(var(--glass-blur));
+    cursor: pointer;
+}
+
+.base-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card {
     padding: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    cursor: pointer;
 }
 
 .card-title {
@@ -207,25 +209,52 @@ h2 {
     transition: filter var(--transition-duration) ease-in-out;
 }
 
-.cta-button {
+.cta-button,
+.modal-cta-button,
+.modal-secondary-button,
+.modal-back-button {
     display: inline-block;
-    background-color: rgb(var(--dark-wood-rgb));
     color: white;
     padding: 12px 25px;
     text-decoration: none;
     border: none;
     border-radius: var(--border-radius-button);
     font-weight: 600;
-    margin-top: 20px;
     transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
     box-shadow: 0 5px 15px rgba(var(--shadow-rgb), 0.1);
+    cursor: pointer;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.modal-cta-button:hover,
+.modal-secondary-button:hover {
     background-color: var(--primary-heading-color);
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(var(--shadow-rgb), 0.15);
 }
+
+.cta-button {
+    background-color: rgb(var(--dark-wood-rgb));
+    margin-top: 20px;
+}
+
+.modal-cta-button,
+.modal-secondary-button {
+    background-color: rgb(var(--dark-wood-rgb));
+    min-width: 120px;
+}
+
+.modal-back-button {
+    background-color: var(--dark-grey);
+    min-width: 120px;
+}
+
+.modal-back-button:hover {
+    background-color: var(--soft-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--shadow-rgb), 0.15);
+}
+
 
 footer {
     background-color: var(--primary-heading-color);
@@ -313,37 +342,6 @@ footer p {
     flex-shrink: 0;
 }
 
-.modal-cta-button,
-.modal-secondary-button,
-.modal-back-button {
-    background-color: rgb(var(--dark-wood-rgb));
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: var(--border-radius-button);
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
-    box-shadow: 0 4px 10px rgba(var(--shadow-rgb), 0.1);
-    min-width: 120px;
-}
-
-.modal-cta-button:hover,
-.modal-secondary-button:hover,
-.modal-back-button:hover {
-    background-color: var(--primary-heading-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(var(--shadow-rgb), 0.15);
-}
-
-.modal-back-button {
-    background-color: var(--dark-grey);
-}
-
-.modal-back-button:hover {
-    background-color: var(--soft-blue);
-}
-
 .modal-body-content {
     flex-grow: 1;
     overflow-y: auto;
@@ -380,7 +378,7 @@ footer p {
     box-shadow: 0px 5px 15px rgba(var(--shadow-rgb), 0.05);
     backdrop-filter: blur(calc(var(--glass-blur) / 2));
     border: 1px solid var(--glass-border);
-    transition: transform var(--transition-duration) ease-in-out;
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -613,6 +611,7 @@ footer p {
 
     .card {
         padding: 15px;
+        border-radius: 15px;
     }
 
     .card-title {

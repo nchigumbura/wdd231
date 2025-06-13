@@ -45,6 +45,13 @@
     align-items: center;
     flex-direction: column;
     padding: 25px;
+    background: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    cursor: pointer;
 }
 
 .card-top-row {
@@ -217,6 +224,18 @@
 .category-card {
     text-align: left;
     padding: 25px;
+    background: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(calc(var(--glass-blur) / 2));
+    border: 1px solid var(--glass-border);
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .category-card .card-title {
@@ -328,6 +347,11 @@
     color: var(--accent-elements);
     margin-top: auto;
 }
+
+.index-main {
+    padding: 20px;
+}
+
 
 @media (max-width: 768px) {
     .welcome-section {
